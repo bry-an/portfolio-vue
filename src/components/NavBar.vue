@@ -1,7 +1,7 @@
 <template>
 <div class = "row menu u-max-full-width">
         <ul>
-            <a href = "#contat">
+            <a href = "#contact">
         <li class = "nav-item" id = "contact-menu">Contact</li></a>
             <a href = "#portfolio">
         <li class = "nav-item" id = "portfolio-menu">Portfolio</li></a>

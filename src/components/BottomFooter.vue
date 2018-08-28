@@ -6,7 +6,7 @@
   <div id = "footer-container">
     <div id = "footer-container-text">
       Bryan Yunis<br>
-      Denver, Colorado<br>
+      Denver, Colorado 80209<br>
       Contact <!--link-->
     </div>
   <img src = "@/assets/images/linkedin.png" class = "embed-images" id = "linkedin-img" />
