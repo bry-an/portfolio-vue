@@ -9,9 +9,12 @@
       Denver, Colorado 80209<br>
       Contact <!--link-->
     </div>
-  <img src = "@/assets/images/linkedin.png" class = "embed-images" id = "linkedin-img" />
-  <img src = "@/assets/images/github.png" class = "embed-images" id = "github-img" />
-  <img src = "@/assets/images/twitter.png" class = "embed-images" id = "twitter-img" />
+<a href = 'https://www.linkedin.com/in/bryan-yunis-878b89167?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BGtUNyprrRCixm6jnHQ3mBg%3D%3D' target="_blank">
+<img src = "@/assets/images/linkedin.png" class = "embed-images" id = "linkedin-img" /></a>
+<a href = 'https://github.com/bry-an' target="_blank">
+<img src = "@/assets/images/github.png" class = "embed-images" id = "github-img" /></a>
+<a href = 'https://twitter.com/bbyunis?lang=en' target="_blank">
+<img src = "@/assets/images/twitter.png" class = "embed-images" id = "twitter-img" /></a>
 
   </div>
   </div>

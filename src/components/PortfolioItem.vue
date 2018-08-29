@@ -6,7 +6,7 @@
             <img src ="@/assets/images/port-perfect-ride.jpg" class = "portfolio-image responsive" />
             <div class = "portfolio-image-caption">
                 <div class = "caption-text"><span class = "cap-title">The Perfect Ride</span><br>A web-app that assists bikers with route-planning and weather avoidance
-                <button class = "portfolio-button">See it</button>
+                <button @click="portfolioClickHandler('https://bry-an.github.io/thePerfectRide/')" class = "portfolio-button">See it</button>
                 </div>
                 </div>
             </div>
@@ -14,7 +14,7 @@
             <img src ="@/assets/images/port-rps.jpg" class = "portfolio-image responsive" />
             <div class = "portfolio-image-caption">
                 <div class = "caption-text"><span class = "cap-title">RPS</span><br>A web-based Multiplayer Rock Paper Scissors Game
-                <button class = "portfolio-button">See it</button>
+                <button @click="portfolioClickHandler('https://bry-an.github.io/RPS-Multiplayer/')" class = "portfolio-button">See it</button>
                 </div>
                 </div>
             </div>
@@ -22,7 +22,7 @@
             <img src ="@/assets/images/port-jeopardy.jpg" class = "portfolio-image responsive" />
             <div class = "portfolio-image-caption">
                 <div class = "caption-text"><span class = "cap-title">Jeopardy<span style="font-size:0.5rem">&reg</span>! Word Guess</span><br>A word-guess game using actual Jeopardy<span style="font-size:0.5rem">&reg</span>! questions 
-                <button class = "portfolio-button">See it</button>
+                <button @click="portfolioClickHandler('http://bryanyunis.com/jeopardy/')" class = "portfolio-button">See it</button>
                 </div>
                 </div>
             </div>
@@ -36,6 +36,11 @@
   export default {
     name: 'PortfolioItem',
     props: ['capTitle', 'caption', 'imgsrc'],
+    methods: {
+        portfolioClickHandler(url) {
+            window.open(url);
+        }
+    }
 }
 </script>
 <style>
