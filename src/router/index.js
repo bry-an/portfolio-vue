@@ -7,12 +7,12 @@ import App from '@/App'
 Vue.use(Router)
 
 //works better to put actual component in component field rather than 'name' using its exported name
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      component: App 
-   },
-  ],
-  mode: 'history'
-})
+// export default new Router({
+//   routes: [
+//     {
+//       path: '/',
+//       component: App 
+//    },
+//   ],
+//   mode: 'history'
+// })

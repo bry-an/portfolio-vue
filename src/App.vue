@@ -9,7 +9,6 @@
     <!-- router-view is for anything that you want for a different page -->
     <FixedFooter></FixedFooter>
     <Home></Home>
-    <router-view></router-view>
     </div>
     <About></About>
     <PortfolioItem></PortfolioItem>
