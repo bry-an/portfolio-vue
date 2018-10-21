@@ -19,7 +19,8 @@ export default {
     handleAnchorScroll(id) {
       console.log(id);
       document.getElementById(id).scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
+        block: "start"
       });
     }
   },
