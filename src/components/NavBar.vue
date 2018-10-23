@@ -1,15 +1,15 @@
 <template>
 <div class = "row menu u-max-full-width">
         <ul>
-        <li v-on:click = "handleAnchorScroll('contact')" class = "nav-item" id = "contact-menu">Contact</li></a>
-        <li v-on:click = "handleAnchorScroll('portfolio')" class = "nav-item" id = "portfolio-menu">Portfolio</li></a>
-        <li v-on:click = "handleAnchorScroll('approach')" class = "nav-item" id = "about-menu">About</li></a>
+        <li v-on:click = "handleAnchorScroll('contact')" class = "nav-item" id = "contact-menu">Contact</li>
+        <li v-on:click = "handleAnchorScroll('portfolio')" class = "nav-item" id = "portfolio-menu">Portfolio</li>
+        <li v-on:click = "handleAnchorScroll('approach')" class = "nav-item" id = "about-menu">About</li>
         </ul>
         </div>
 </template>
 <script>
 export default {
-  name: "navbar",
+  name: "Navbar",
   methods: {
     handleNavbarScroll(event) {
       if (window.scrollY > 100)

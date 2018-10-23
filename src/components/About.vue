@@ -1,6 +1,7 @@
 
 <template>
-<div id = "approach"><a name = "about"></a>
+<div id="about">
+<div id = "approach">
     <h2 id = "section-title">APPROACH</h2>
 
 <p>I am insatiably eager to learn new technologies, web frameworks, and languages. 
@@ -17,6 +18,30 @@
     practical, real-world approach to coding that is focused on solving problems and delivering a 
     positive user experience.</p>
 </div>
+<div id="skills">
+    <h2 id="section-title">MY SKILLS</h2>
+    <p>I feel most alive when I'm neck-deep in unfamiliar code, but here are the technologies and skills
+        I have experience with.</p>
+        <div class="row">
+            <div class="6 columns u-pull-left">
+                <h3>Front End</h3>
+
+
+
+            </div>
+            <div class="6 columns u-pull-right">
+                <h3>Back End</h3>
+
+
+            </div>
+
+
+
+        </div>
+
+</div>
+</div>
+
 
 </template>
 
@@ -31,14 +56,15 @@ export default {
 
 #section-title {
   color: #444;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bold;
   font-family: "Roboto", "sans-serif";
   color: #444;
   padding: 3% 0 3% 0;
 }
 
-#approach {
+#approach,
+#skills {
   text-align: center;
   color: #555;
   font-size: 2.2rem;

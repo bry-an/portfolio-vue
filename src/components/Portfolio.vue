@@ -2,39 +2,14 @@
 <template>
 <div id = "portfolio">
     <h2 id = "featured-heading">FEATURED</h2>
-    <div class = "portfolio-image-container">
-            <img src ="@/assets/images/port-perfect-ride.jpg" class = "portfolio-image responsive" />
-            <div class = "portfolio-image-caption">
-                <div class = "caption-text"><span class = "cap-title">The Perfect Ride</span><br>A web-app that assists bikers with route-planning and weather avoidance
-                <button @click="portfolioClickHandler('https://bry-an.github.io/thePerfectRide/')" class = "portfolio-button">See it</button>
-                </div>
-                </div>
-            </div>
-    <div class = "portfolio-image-container">
-            <img src ="@/assets/images/port-rps.jpg" class = "portfolio-image responsive" />
-            <div class = "portfolio-image-caption">
-                <div class = "caption-text"><span class = "cap-title">RPS</span><br>A web-based Multiplayer Rock Paper Scissors Game
-                <button @click="portfolioClickHandler('https://bry-an.github.io/RPS-Multiplayer/')" class = "portfolio-button">See it</button>
-                </div>
-                </div>
-            </div>
-    <div class = "portfolio-image-container">
-            <img src ="@/assets/images/port-jeopardy.jpg" class = "portfolio-image responsive" />
-            <div class = "portfolio-image-caption">
-                <div class = "caption-text"><span class = "cap-title">Jeopardy<span style="font-size:0.5rem">&reg</span>! Word Guess</span><br>A word-guess game using actual Jeopardy<span style="font-size:0.5rem">&reg</span>! questions 
-                <button @click="portfolioClickHandler('http://bryanyunis.com/jeopardy/')" class = "portfolio-button">See it</button>
-                </div>
-                </div>
-            </div>
-            </div>
-
-
+    <h4 id='featured-subheading'>Which technology are you interested in?</h4>
+    </div>
 </template>
 
 
 <script>
 export default {
-  name: "PortfolioItem",
+  name: "Portfolio",
   props: ["capTitle", "caption", "imgsrc"],
   methods: {
     portfolioClickHandler(url) {
@@ -88,6 +63,10 @@ export default {
 
 .portfolio-image-container:hover .portfolio-image-caption {
   opacity: 1;
+}
+
+#featured-subheading {
+  text-align: center;
 }
 
 .portfolio-image-caption {

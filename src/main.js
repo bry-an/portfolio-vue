@@ -3,12 +3,6 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import navbar from './components/NavBar'
-import home from './components/Home'
-import About from './components/About'
-import FixedFooter from './components/FixedFooter'
-import PortfolioItem from './components/PortfolioItem'
-import Contact from './components/Contact'
 
 
 Vue.config.productionTip = false
@@ -17,6 +11,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  components: { App, navbar, home, About, FixedFooter, PortfolioItem, Contact},
+  components: { App },
   template: '<App/>'
 })
