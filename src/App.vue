@@ -1,7 +1,7 @@
 
 <template>
   <div id="app">
-    <div class = "myContainer">
+    <div class = "top-container">
       <Navbar/>
     <!-- <router-link to="/firstroute/bry">Go To First Route</router-link> -->
     <!-- below name specification is not necessary but would allow params to be passed if specified in route path as :param -->
@@ -10,9 +10,11 @@
     <FixedFooter/>
     <Home/>
     </div>
+    <div class="body-container">
     <About/>
     <Portfolio/>
     <Contact/>
+    </div>
     <BottomFooter/>
     </div>
 </template>
@@ -52,10 +54,15 @@ export default {
   color: #2c3e50;
 }
 
-.myContainer {
+.top-container {
   padding: 0;
   height: 100%;
   width: 100%;
+}
+
+.body-container {
+  width: 90%;
+  margin: auto;
 }
 
 .responsive {

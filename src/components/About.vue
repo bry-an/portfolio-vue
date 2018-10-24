@@ -15,40 +15,19 @@
 <p>Before web development, I honed my analytical skills working in aquatic toxicology, 
     and developed leadership and communication experience serving as campaign manager and 
     communications director on a U.S. Congressional campaign. These diverse experiences inform a 
-    practical, real-world approach to coding that is focused on solving problems and delivering a 
+    practical, real-world approach to development that is focused on solving problems and delivering a 
     positive user experience.</p>
 </div>
-<div id="skills">
-    <h2 id="section-title">MY SKILLS</h2>
-    <p>I feel most alive when I'm neck-deep in unfamiliar code, but here are the technologies and skills
-        I have experience with.</p>
-        <div class="row">
-            <div class="6 columns u-pull-left">
-                <h3>Front End</h3>
-
-
-
-            </div>
-            <div class="6 columns u-pull-right">
-                <h3>Back End</h3>
-
-
-            </div>
-
-
-
-        </div>
-
+<Skills />
 </div>
-</div>
-
-
 </template>
 
 
 <script>
+import Skills from "./skills";
 export default {
-  name: "About"
+  name: "About",
+  components: { Skills }
 };
 </script>
 <style>

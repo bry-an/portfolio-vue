@@ -10,7 +10,6 @@
 <script>
 export default {
   name: "Portfolio",
-  props: ["capTitle", "caption", "imgsrc"],
   methods: {
     portfolioClickHandler(url) {
       window.open(url);
