@@ -1,103 +1,104 @@
-let skills=    [
+let skills =
+    [
     { 
         name: 'HTML', 
         image: '',
-        skillType: [ 'frontend']
+        type: ['frontend']
     }, 
     { 
-        name: 'javacript', 
+        name: 'JavaScript', 
         image: 'javascript.png',
-        skillType: [ 'frontend', 'backend']
+        type: [ 'frontend', 'backend']
     }, 
     {
         name: 'CSS & CSS Frameworks', 
         image: '',
-        skillType: [ 'frontend']
+        type: [ 'frontend']
     }, 
     {
         name: 'SASS', 
         image: '',
-        skillType: [ 'frontend']
+        type: [ 'frontend']
     }, 
     {
         name: 'Responsive Web Design', 
         image: '',
-        skillType: [ 'frontend']
+        type: [ 'frontend']
     }, 
     {
         name: 'Version Control with Git/GitHub', 
         image: '',
-        skillType: [ 'technologies']
+        type: [ 'technologies']
     }, 
     {
         name: 'Webpack', 
         image: '',
-        skillType: [ 'technologies']
+        type: [ 'technologies']
     }, 
     {
         name: 'React.js', 
         image: '',
-        skillType: [ 'frontend']
+        type: [ 'frontend']
     }, 
     {
         name: 'Redux', 
         image: '',
-        skillType: [ 'frontend']
+        type: [ 'frontend']
     }, 
     {
         name: 'Vue.js', 
         image: '',
-        skillType: [ 'frontend']
+        type: [ 'frontend']
     }, 
     {
         name: 'SQL/MySQL & Sequelize', 
         image: '',
-        skillType: [ 'backend']
+        type: [ 'backend']
     }, 
     {
         name: 'MongoDB & Mongoose', 
         image: '',
-        skillType: [ 'backend']
+        type: [ 'backend']
     }, 
     {
         name: 'GraphQL', 
         image: '',
-        skillType: [ 'backend']
+        type: [ 'backend']
     }, 
     {
         name: 'Next.js', 
         image: '',
-        skillType: [ 'frontend', 'technologies']
+        type: [ 'frontend', 'technologies']
     }, 
     {
         name: 'Test-driven development: Mocha/Chai & Jest', 
         image: '',
-        skillType: [ 'technologies']
+        type: [ 'technologies']
     }, 
     {
         name: 'Express', 
         image: '',
-        skillType: [ 'backend']
+        type: [ 'backend']
     }, 
     {
         name: 'AWS: S3 & EC2', 
         image: '',
-        skillType: [ 'backend', 'technologies']
+        type: [ 'backend', 'technologies']
     }, 
     {
         name: 'Node.js', 
         image: '',
-        skillType: [ 'backend']
+        type: [ 'backend']
     }, 
     {
         name: 'Firebase', 
         image: '',
-        skillType: [ 'frontend', 'backend', 'technologies']
+        type: [ 'frontend', 'backend', 'technologies']
     }, 
     {
         name: 'Google Developers API', 
         image: '',
-        skillType: [ 'technologies']
+        type: [ 'technologies']
     }, 
     ]
 
