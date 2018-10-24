@@ -21,5 +21,8 @@ export default {
 .skill-name 
     font-size: 1.8rem;
 
+.skill
+    img
+        width: 50px
 
 </style>

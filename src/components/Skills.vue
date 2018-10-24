@@ -49,6 +49,9 @@ export default {
         },
         allClicked() {
             this.displayAll = true;
+            this.displayFrontend = false;
+            this.displayTechnologies = false;
+            this.displayBackend = false;
         }
 
 
@@ -82,6 +85,7 @@ export default {
 <style lang="sass">
 
 #skills
+    min-height: 850px
     button:focus
         background-color: #ff5d4c
         
@@ -92,7 +96,7 @@ export default {
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
     grid-gap: 5px
-    margin-top: 10px
+    margin-top: 50px
 
 
 

@@ -8,115 +8,115 @@ let skills =
     }, 
     { 
         name: 'JavaScript', 
-        image: 'javascript.png',
+        image: '/static/javascript-logo.png',
         type: [ 'frontend', 'backend'],
         key: 2
     }, 
     {
         name: 'CSS & CSS Frameworks', 
-        image: '',
+        image: '/static/css-logo.png',
         type: [ 'frontend'],
         key: 3
     }, 
     {
         name: 'SASS', 
-        image: '',
+        image: '/static/sass-logo.png',
         type: [ 'frontend'],
         key: 4
     }, 
     {
         name: 'Responsive Web Design', 
-        image: '',
+        image: '/static/responsive-logo.png',
         type: [ 'frontend'],
         key: 5
     }, 
     {
         name: 'Version Control with Git/GitHub', 
-        image: '',
+        image: '/static/git-logo.png',
         type: [ 'technologies'],
         key: 6
     }, 
     {
         name: 'Webpack', 
-        image: '',
+        image: '/static/webpack-logo.png',
         type: [ 'technologies'],
         key: 7
     }, 
     {
         name: 'React.js', 
-        image: '',
+        image: '/static/react-logo.png',
         type: [ 'frontend'],
         key: 8
     }, 
     {
         name: 'Redux', 
-        image: '',
+        image: '/static/redux-logo.png',
         type: [ 'frontend'],
         key: 9
     }, 
     {
-        name: 'Vue.js', 
-        image: '',
+        name: 'Vue.js & Vuex', 
+        image: '/static/vue-logo.png',
         type: [ 'frontend'],
         key: 10
     }, 
     {
         name: 'SQL/MySQL & Sequelize', 
-        image: '',
+        image: '/static/sql-logo.png',
         type: [ 'backend'],
         key: 11
     }, 
     {
         name: 'MongoDB & Mongoose', 
-        image: '',
+        image: '/static/mongo-logo.png',
         type: [ 'backend'],
         key: 12
     }, 
     {
         name: 'GraphQL', 
-        image: '',
+        image: '/static/graphql-logo.png',
         type: [ 'backend'],
         key: 13
     }, 
     {
         name: 'Next.js', 
-        image: '',
+        image: '/static/next-logo.png',
         type: [ 'frontend', 'technologies'],
         key: 14
     }, 
     {
         name: 'Test-driven development: Mocha/Chai & Jest', 
-        image: '',
+        image: '/static/mocha-logo.png',
         type: [ 'technologies'],
         key: 15
     }, 
     {
         name: 'Express', 
-        image: '',
+        image: '/static/express-logo.png',
         type: [ 'backend'],
         key: 16
     }, 
     {
         name: 'AWS: S3 & EC2', 
-        image: '',
+        image: '/static/aws-logo.png',
         type: [ 'backend', 'technologies'],
         key: 17
     }, 
     {
         name: 'Node.js', 
-        image: '',
+        image: '/static/node-logo.png',
         type: [ 'backend'],
         key: 18
     }, 
     {
         name: 'Firebase', 
-        image: '',
+        image: '/static/firebase-logo.png',
         type: [ 'frontend', 'backend', 'technologies'],
         key: 19
     }, 
     {
         name: 'Google Developers API', 
-        image: '',
+        image: '/static/google-logo.png',
         type: [ 'technologies'],
         key: 20
     }, 
