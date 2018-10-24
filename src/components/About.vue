@@ -35,11 +35,12 @@ export default {
 
 #section-title {
   color: #444;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: bold;
   font-family: "Roboto", "sans-serif";
   color: #444;
   padding: 3% 0 3% 0;
+  text-align: center;
 }
 
 #approach,
