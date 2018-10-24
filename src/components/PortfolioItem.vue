@@ -6,10 +6,7 @@
             Technologies: {{technologies}}
         </li>
         <li>
-            Live Link: {{githubLink}}
-        </li>
-        <li>
-            GitHub Link: {{liveLink}}
+            <a :href='githubLink'><img src='/static/github-logo.png' alt='github link' /></a>
         </li>
 
 
@@ -26,6 +23,8 @@ export default {
 
 .portfolio-item
     justify-self: center
+    img
+        border-radius: 3px
 
 
 ul

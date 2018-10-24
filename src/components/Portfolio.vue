@@ -1,6 +1,6 @@
 
 <template>
-<div class = "portfolio">
+<div id = "portfolio">
     <h2 id = "section-title">FEATURED</h2>
     <PortfolioItem v-for='item in portfolioItems' 
       :key='item.name' 
@@ -38,7 +38,7 @@ export default {
 
 @import url("https://fonts.googleapis.com/css?family=Roboto")
 
-.portfolio 
+#portfolio 
   max-width: 80%
   margin: auto
   display: grid
