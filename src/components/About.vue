@@ -35,7 +35,7 @@ export default {
 
 #section-title {
   color: #444;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: bold;
   font-family: "Roboto", "sans-serif";
   color: #444;
@@ -68,7 +68,7 @@ export default {
 
 @media (min-width: 900px) {
   #section-title {
-    font-size: 16rem;
+    font-size: 12rem;
   }
 }
 </style>

@@ -1,8 +1,7 @@
 
 <template>
 <div id = "portfolio">
-    <h2 id = "featured-heading">FEATURED</h2>
-    <h4 id='featured-subheading'>Which technology are you interested in?</h4>
+    <h2 id = "section-title">FEATURED</h2>
     </div>
 </template>
 
@@ -19,6 +18,10 @@ export default {
 </script>
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+
+#portfolio {
+  text-align: center;
+}
 
 #featured-heading {
   font-family: "Roboto", "sans-serif";
@@ -62,10 +65,6 @@ export default {
 
 .portfolio-image-container:hover .portfolio-image-caption {
   opacity: 1;
-}
-
-#featured-subheading {
-  text-align: center;
 }
 
 .portfolio-image-caption {

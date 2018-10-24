@@ -17,7 +17,6 @@ export default {
       else document.querySelector(".menu").classList.remove("menu-scrolled");
     },
     handleAnchorScroll(id) {
-      console.log(id);
       document.getElementById(id).scrollIntoView({
         behavior: "smooth",
         block: "start"
@@ -32,40 +31,32 @@ export default {
   }
 };
 </script>
-<style>
-ul {
-  list-style: none;
-}
+<style lang="sass">
+.menu  
+  position: fixed
+  width: 100%
+  margin: auto
+  z-index: 2
+  padding: 0
 
-.nav {
-  margin: 0;
-  padding: 0;
-}
+  ul 
+    list-style: none
 
-.nav-item {
-  float: right;
-  font-size: 2rem;
-  margin-right: 30px;
-  color: white;
-  margin-top: 1%;
-  font-family: "Raleway", sans-serif;
-}
 
-.menu-scrolled {
-  background-color: #ff5d4c;
-}
+  .nav-item 
+    float: right
+    font-size: 2.5rem
+    margin-right: 30px
+    color: white
+    margin-top: 1%
+    font-family: "Raleway", sans-serif
+    cursor: pointer
 
-.menu {
-  position: fixed;
-  width: 100%;
-  margin: auto;
-  z-index: 2;
-  padding: 0;
-}
+.menu-scrolled 
+  background-color: #ff5d4c
 
-@media (min-width: 400px) {
-  .nav-item {
-    font-size: 2.8rem;
-  }
-}
+
+@media (min-width: 400px) 
+  nav-item 
+    font-size: 2.8rem
 </style>
