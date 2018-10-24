@@ -66,13 +66,6 @@ export default {
       thankYouText.innerText = "Thank you. Your message has been submitted.";
       contactWindowBody.appendChild(thankYouText);
 
-      // while (contactWindowBody.firstChild)
-      // contactWindowBody.removeChild(contactWindowBody.firstChild);
-      // //why am I having issues chaining these JS Dom-manipulation methods?
-
-      // var thanksMsg = document.createElement('p');
-      // thanksMsg.setAttribute('id', 'thanks-message');
-      // thanksMsg.innerText = "Thanks. Your message has been submitted.";
       var thanksBtn = document.createElement("button");
       thanksBtn.setAttribute("id", "thanks-message-button");
       thanksBtn.innerText = "close";

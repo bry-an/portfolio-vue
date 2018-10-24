@@ -2,11 +2,17 @@
 <div id="skills">
     <h2 id="section-title">MY SKILLS</h2>
     <p>I might feel most alive when I'm neck-deep in unfamiliar code, but there are many skills
-         and technologies I have experience with.</p>
+         and technologies that I have experience with.</p>
+         <button id='btn-all' autofocus @click='allClicked'>All</button>
+         <button id='btn-frontend' @click='frontendClicked'>Frontend</button>
+         <button id='btn-backend' @click='backendClicked'>Backend</button>
+         <button id='btn-technologies' @click='technologiesClicked'>Technologies</button>
+         
         <div class='skills-container'>
-        <SkillsItem v-for='skill in frontend' :name='skill.name' :key='skill.name'  :image='skill.image' :type='skill.type' />
-        <SkillsItem v-for='skill in backend' :name='skill.name' :key='skill.name'  :image='skill.image' :type='skill.type' />
-        <SkillsItem v-for='skill in technologies' :name='skill.name' :key='skill.name'  :image='skill.image' :type='skill.type' />
+        <SkillsItem v-show='displayAll' v-for='skill in skills' :name='skill.name' :key='skill.key'  :image='skill.image' :type='skill.type' />
+        <SkillsItem v-show='displayFrontend' v-for='skill in frontend' :name='skill.name' :key='skill.key'  :image='skill.image' :type='skill.type' />
+        <SkillsItem v-show='displayBackend' v-for='skill in backend' :name='skill.name' :key='skill.key'  :image='skill.image' :type='skill.type' />
+        <SkillsItem v-show='displayTechnologies' v-for='skill in technologies' :name='skill.name' :key='skill.key'  :image='skill.image' :type='skill.type' />
         </div>
 
 
@@ -22,6 +28,32 @@ import SkillsItem from './skillsItem'
 
 export default {
     name: "Skills", 
+    methods: {
+        frontendClicked() {
+            this.displayAll = false;
+            this.displayBackend = false;
+            this.displayTechnologies = false;
+            this.displayFrontend = true;
+        },
+        backendClicked() {
+            this.displayAll = false;
+            this.displayFrontend = false;
+            this.displayTechnologies = false;
+            this.displayBackend = true;
+        },
+        technologiesClicked() {
+            this.displayAll = false;
+            this.displayFrontend = false;
+            this.displayBackend = false;
+            this.displayTechnologies = true;
+        },
+        allClicked() {
+            this.displayAll = true;
+        }
+
+
+
+    },
     computed: {
         frontend()  {
             return this.skills.filter(skill => skill.type.indexOf('frontend') !== -1)
@@ -35,7 +67,11 @@ export default {
     },
     data() {
         return {
-            skills
+            skills,
+            displayFrontend: false, 
+            displayBackend: false, 
+            displayTechnologies: false,
+            displayAll: true
         }
     },
     components: { SkillsItem }
@@ -43,12 +79,21 @@ export default {
 }
 </script>
 
-<style>
-.skills-container {
-    max-width: 80%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 5px;
-}
+<style lang="sass">
+
+#skills
+    button:focus
+        background-color: #ff5d4c
+        
+
+.skills-container 
+    max-width: 80%
+    margin: auto
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+    grid-gap: 5px
+    margin-top: 10px
+
+
+
 </style>

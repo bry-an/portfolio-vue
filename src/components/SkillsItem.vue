@@ -1,10 +1,8 @@
 
 <template>
 <div class='skill'>
-    <div class='skill-img'>
-            <img src='https://via.placeholder.com/50/50' v-bind:alt='name' />
+            <img :src='image' :alt='name' />
 
-    </div>
     <div class='skill-name'>
 {{name}}
 </div>
@@ -15,12 +13,13 @@
 <script>
 export default {
     name: 'SkillsItem',
-    props: ['name']
+    props: ['name', 'image']
 }
 </script>
-<style>
-.skill-name {
+<style lang="sass">
+
+.skill-name 
     font-size: 1.8rem;
 
-}
+
 </style>
