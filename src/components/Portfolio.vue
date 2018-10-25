@@ -2,6 +2,7 @@
 <template>
 <div id = "portfolio">
     <h2 id = "section-title">FEATURED</h2>
+    <p>(This site would like you to know that it's a proudly-built Vue.js app.)</p>
     <PortfolioItem v-for='item in portfolioItems' 
       :key='item.name' 
       :name='item.name'
@@ -9,6 +10,8 @@
       :technologies='item.technologies'
       :githubLink='item.githubLink'
       :liveLink='item.liveLink'
+      :problem='item.problem' 
+      :solution='item.solution'
       />
 
 
@@ -45,5 +48,9 @@ export default {
   grid-template-colums: repeat(auto-fit, minmax(200px, 1fr))
   grid-gap: 10px
   margin-top: 40px
+  p
+    text-align: center
+    font-family: "Raleway", "sans-serif"
+    font-size: 1.8rem
 
 </style>
