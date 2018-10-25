@@ -3,13 +3,11 @@
   <div id = "footer-container">
 <a href = 'https://www.linkedin.com/in/bryan-yunis' target="_blank">
 <img src = "@/assets/images/linkedin.png" class = "embed-images" id = "linkedin-img" /></a>
+<p id='contact-text'>&copy; Bryan Yunis<br> Denver, CO 80209</p>
 <a href = 'https://github.com/bry-an' target="_blank">
 <img src = "@/assets/images/github.png" class = "embed-images" id = "github-img" /></a>
-<a href = 'https://twitter.com/bbyunis?lang=en' target="_blank">
-<img src = "@/assets/images/twitter.png" class = "embed-images" id = "twitter-img" /></a>
-
-<p></p>
-<p id='contact-text'>&copy; Bryan Yunis<br> Denver, CO 80209</p>
+<!-- <a href = 'https://twitter.com/bbyunis?lang=en' target="_blank">
+<img src = "@/assets/images/twitter.png" class = "embed-images" id = "twitter-img" /></a> -->
   </div>
   </template>
     
@@ -49,6 +47,5 @@ a {
 #contact-text {
   text-align: center;
   color: white;
-  
 }
 </style>
