@@ -3,8 +3,12 @@
     <div class='portfolio-item-heading'>
         {{name}}
     </div>
+    <div class='technologies-list'>
+        <TechnologyIcon v-for='icon in technologyIcons' :image='icon' :key='icon'/>
+    </div>
     <img :src='still' :id='id' :alt='name' 
         class='portfolio-item-img' @mouseover="animateGif(id)" @mouseout="stopGif(id)"/>
+            <a :href='githubLink'><img src='/static/github-logo.png' alt='github link' /></a>
     <ul>
         <li> 
             <h5>The Problem</h5>
@@ -15,7 +19,6 @@
             {{solution}}
         </li>
         <li>
-            <a :href='githubLink'><img src='/static/github-logo.png' alt='github link' /></a>
         </li>
 
 
@@ -23,6 +26,7 @@
 </div>
 </template>
 <script>
+import TechnologyIcon from './TechnologyIcon'
 export default {
   name: "PortfolioItem",
   props: ["id", "name", "still", "gif", "technologies", "githubLink", "liveLink", "problem", "solution"],
@@ -32,6 +36,12 @@ export default {
       },
       stopGif: function(el) {
           document.getElementById(el).setAttribute('src', this.still)
+      }
+  }, 
+  components: { TechnologyIcon },
+  data () {
+      return {
+          technologyIcons: this.technologies
       }
   }
 };
@@ -44,10 +54,14 @@ export default {
     .portfolio-item-img
         border-radius: 3px
         width: 669px
-        margin:auto
+        margin: 0 auto 10px auto
+        border: 1px solid #ccc
+        display: block
     
     .portfolio-item-heading
         font-size: 3rem
+        text-align: center
+    .technologies-list
         text-align: center
 
 ul
