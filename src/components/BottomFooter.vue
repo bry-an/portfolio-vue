@@ -1,11 +1,6 @@
 
 <template>
   <div id = "footer-container">
-    <!-- <div id = "footer-container-text">
-      Bryan Yunis<br>
-      Denver, Colorado 80209<br>
-      Contact 
-    </div> -->
 <a href = 'https://www.linkedin.com/in/bryan-yunis' target="_blank">
 <img src = "@/assets/images/linkedin.png" class = "embed-images" id = "linkedin-img" /></a>
 <a href = 'https://github.com/bry-an' target="_blank">
@@ -13,6 +8,8 @@
 <a href = 'https://twitter.com/bbyunis?lang=en' target="_blank">
 <img src = "@/assets/images/twitter.png" class = "embed-images" id = "twitter-img" /></a>
 
+<p></p>
+<p id='contact-text'>&copy; Bryan Yunis<br> Denver, CO 80209</p>
   </div>
   </template>
     
@@ -26,7 +23,7 @@ export default {
   <style>
 #footer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 8%;
   padding-top: 3%;
   height: 130px;
@@ -47,5 +44,11 @@ a {
 
 #footer-container-text {
   font-size: 1.8rem;
+}
+
+#contact-text {
+  text-align: center;
+  color: white;
+  
 }
 </style>
