@@ -3,7 +3,8 @@
     <div class='portfolio-item-heading'>
         {{name}}
     </div>
-    <img :src='still' :id='id' :alt='name' class='portfolio-item-img' @mouseover="animateGif(id)" @mouseout="stopGif(id)"/>
+    <img :src='still' :id='id' :alt='name' 
+        class='portfolio-item-img' @mouseover="animateGif(id)" @mouseout="stopGif(id)"/>
     <ul>
         <li> 
             <h5>The Problem</h5>

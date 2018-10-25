@@ -34,6 +34,9 @@
             submittedText.setAttribute("id", "submitted-text")
             submittedText.innerText = "Thanks, we'll be in touch soon."
             contactBody.appendChild(submittedText);
+            setTimeout(function() {
+              submittedText.innerText=''
+            }, 5000)
       }
     }
 
@@ -52,35 +55,50 @@
   color: #444;
 }
 
+input {
+    font-family: 'Raleway', 'sans-serif';
+}
+
+textarea {
+    font-family: 'Raleway', 'sans-serif';
+
+}
 
 #contact-body {
   color: #555;
   font-size: 3rem;
-  font-family: 'Raleway, sans-serif';
+  font-family: 'Raleway', 'sans-serif';
   width: 80%;
   margin: auto;
+  min-height: 420px;
+  text-align: center;
+}
+#contact-body p {
+  text-align: center;
+  font-family: 'Raleway', 'sans-serif'
 }
 #contact-section-email {
+  width: 60%;
   margin-bottom: 3%;
-  width: 45%;
-  border: 1px solid #ff5d4c
+  /* width: 45%; */
+  /* border: 1px solid #ff5d4c */
 }
 #contact-section-name {
-  width: 44%;
-  border: 1px solid #ff5d4c
+  width: 60%;
+  /* width: 44%; */
+  /* border: 1px solid #ff5d4c */
 }
 
 #contact-section-message {
-  width: 44%;
-  border: 1px solid #ff5d4c
+  width: 60%;
+  /* border: 1px solid #ff5d4c */
 }
 #contact-section-submit-btn {
 display: block;
 width: 20%;
-margin-bottom: 1%;
-border: 1px solid #ff5d4c;
 font-size: 0.5rem;
 padding: 0;
+margin: auto;
 }
 
 #submitted-text {

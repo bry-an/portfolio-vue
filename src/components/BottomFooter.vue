@@ -27,8 +27,8 @@ export default {
 #footer-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  padding: 2% 0 0 2%;
   margin-top: 8%;
+  padding-top: 3%;
   height: 130px;
   background-color: #444;
 }
