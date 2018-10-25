@@ -6,9 +6,9 @@
     <div class='technologies-list'>
         <TechnologyIcon v-for='icon in technologyIcons' :image='icon' :key='icon'/>
     </div>
-    <img :src='still' :id='id' :alt='name' 
-        class='portfolio-item-img' @mouseover="animateGif(id)" @mouseout="stopGif(id)"/>
-            <a :href='githubLink'><img src='/static/github-logo.png' alt='github link' /></a>
+    <a :href='liveLink' target="_blank"><img :src='still' :id='id' :alt='name' 
+        class='portfolio-item-img' @mouseover="animateGif(id)" @mouseout="stopGif(id)"/></a>
+            <a :href='githubLink' target="_blank"><img src='/static/github-logo.png' alt='github link' /></a>
     <ul>
         <li> 
             <h5>The Problem</h5>
@@ -18,8 +18,7 @@
             <h5>The Solution</h5>
             {{solution}}
         </li>
-        <li>
-        </li>
+        <hr>
 
 
     </ul>
@@ -53,7 +52,9 @@ export default {
     justify-self: center
     .portfolio-item-img
         border-radius: 3px
-        width: 669px
+        width: 100%
+        max-width: 669px
+        height: auto
         margin: 0 auto 10px auto
         border: 1px solid #ccc
         display: block

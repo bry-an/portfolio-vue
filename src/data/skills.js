@@ -31,6 +31,12 @@ const skills =
             key: 5
         },
         {
+            name: 'jQuery',
+            image: '/static/jquery-logo.png',
+            type: ['frontend'],
+            key: 21 
+        },
+        {
             name: 'Version Control with Git/GitHub',
             image: '/static/git-logo.png',
             type: ['technologies'],

@@ -2,20 +2,24 @@
 <template>
 <div id="about">
 <div id = "approach">
-    <h2 id = "section-title">APPROACH</h2>
+    <h2 id = "section-title">ABOUT ME</h2>
 
-<p>I am insatiably eager to learn new technologies, web frameworks, and languages. 
+<p>I have built several full-stack web apps, including applications in React.js and Vue.js.
+  I gained proficiency in the MERN stack at the University of Denver Web Development program, but 
+  continually challenge myself to learn new languages, web frameworks, and development tools. </p>
+  <p>
     I am driven by the fact that there are more technologies than anyone could learn in a lifetime, 
-    so I'd better get going. I am full-stack through-and-through: 
+    so I'd better get going. If it's compiled or interpreted, I have my eye on it. 
+    I am full-stack through-and-through: 
     I enjoy perfecting low-level code to provide a satisfying, snappy user experience on the other side. 
-    If it's compiled or interpreted, I have my eye on it. </p>
+    </p>
     <p>When otherwise at my keyboard, I am fascinated by anything that involves machine learning. 
         Off the keyboard, I enjoy getting outside for long gravel bike rides, trail runs, 
         and hikes in the mountains. I also love reading and writing, and am a confessed news-junkie.</p>
 <p>Before web development, I honed my analytical skills working in aquatic toxicology, 
     and developed leadership and communication experience serving as campaign manager and 
     communications director on a U.S. Congressional campaign. These diverse experiences inform a 
-    practical, real-world approach to development that is focused on solving problems and delivering a 
+    practical, real-world approach to web development that is focused on solving problems and delivering a 
     positive user experience.</p>
 </div>
 <Skills />
@@ -53,6 +57,12 @@ export default {
   font-family: "Raleway", "sans-serif";
 }
 
+#approach,
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 @media (min-width: 400px) {
   #section-title {
     font-size: 6rem;
@@ -63,7 +73,7 @@ export default {
     font-size: 10rem;
   }
   #approach {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 }
 

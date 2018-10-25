@@ -6,7 +6,7 @@ const portfolioItems =
             still:'/static/weather-rider-demo-still.png',
             problem: "Biking apps don't give users detailed weather at points along their route at a certain time in the future. They also lack headwind information, an important metric for cyclists.", 
             solution: 'Enter your start and end points and time of ride, and WeatherRider displays an interactive map with weather information along the route. Users can click any point on the map for weather at that point at the selected time.',
-            technologies: ['/static/google-logo.png', '/static/javascript-logo.png'],
+            technologies: ['/static/google-logo.png', '/static/javascript-logo.png', '/static/jquery-logo.png'],
             githubLink: 'https://github.com/bry-an/weather-rider',
             liveLink: 'https://bry-an.github.io/weather-rider/',
             id: 'weather-rider'
