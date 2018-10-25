@@ -3,7 +3,7 @@
     <div class='portfolio-item-heading'>
         {{name}}
     </div>
-    <img :src='image' :alt='name' class='portfolio-item-img'/>
+    <img :src='still' :id='id' :alt='name' class='portfolio-item-img' @mouseover="animateGif(id)" @mouseout="stopGif(id)"/>
     <ul>
         <li> 
             <h5>The Problem</h5>
@@ -24,7 +24,15 @@
 <script>
 export default {
   name: "PortfolioItem",
-  props: ["name", "image", "technologies", "githubLink", "liveLink", "problem", "solution"]
+  props: ["id", "name", "still", "gif", "technologies", "githubLink", "liveLink", "problem", "solution"],
+  methods: {
+      animateGif: function(el) {
+          document.getElementById(el).setAttribute('src', this.gif)
+      },
+      stopGif: function(el) {
+          document.getElementById(el).setAttribute('src', this.still)
+      }
+  }
 };
 </script>
 <style lang="sass">

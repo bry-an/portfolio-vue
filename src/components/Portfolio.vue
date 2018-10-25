@@ -6,12 +6,14 @@
     <PortfolioItem v-for='item in portfolioItems' 
       :key='item.name' 
       :name='item.name'
-      :image='item.image'
+      :still='item.still'
+      :gif='item.gif'
       :technologies='item.technologies'
       :githubLink='item.githubLink'
       :liveLink='item.liveLink'
       :problem='item.problem' 
       :solution='item.solution'
+      :id='item.id'
       />
 
 
