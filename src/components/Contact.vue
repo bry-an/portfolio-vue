@@ -38,15 +38,27 @@ import axios from 'axios'
             }, 5000)
       },
       submitToApi: function() {
-        const URL = 'https://0zma21lu08.execute-api.us-east-1.amazonaws.com/production'
-        const name = document.getElementById('contact-section.name').val()
-        const email = document.getElementById('contact-section.email').val()
-        const message = document.getElementById('contact-section.message').val()
+        const URL = 'https://0zma21lu08.execute-api.us-east-1.amazonaws.com/02/contactme'
+        const name = document.getElementById('contact-section-name').value
+        const email = document.getElementById('contact-section-email').value
+        const message = document.getElementById('contact-section-message').value
         const data = {
           name,
           email, 
           message
         }
+        // $.ajax({
+        //   type: "POST", 
+        //   url: URL, 
+        //   crossDomain: 'true', 
+        //   contentType: "application/json; charset=utf-8",
+        //   data: JSON.stringify(data),
+
+        //   success: () => {
+        //     console.log('success')
+        //     this.clearContactArea()
+        //   }
+        // })
         axios.post(URL, JSON.stringify(data))
           .then(response => console.log('aws response', response))
           .then(this.clearContactArea())
