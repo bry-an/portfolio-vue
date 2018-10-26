@@ -103,7 +103,7 @@ const skills =
             key: 16
         },
         {
-            name: 'AWS: S3 & EC2',
+            name: 'AWS: S3, EC2, Lambda',
             image: '/static/aws-logo.png',
             type: ['backend', 'technologies'],
             key: 17

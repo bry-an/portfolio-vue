@@ -3,10 +3,14 @@
     <h2 id="section-title">MY SKILLS</h2>
     <p>I might feel most alive when I'm neck-deep in unfamiliar code, but there are many skills
          and technologies that I have experience with.</p>
-         <button id='btn-all' autofocus @click='allClicked'>All</button>
+         <input type='radio' id='btn-all' v-model='selected' value='all' @change='allClicked'><span class='label body'>All</span>
+         <input type='radio' id='btn-frontend' v-model='selected' value='frontend' @change='frontendClicked'><span class='label body'>Frontend</span>
+         <input type='radio' id='btn-backend' v-model='selected' value='backend' @change='backendClicked'><span class='label body'>Backend</span>
+         <input type='radio' id='btn-technologies' v-model='selected' value='technologies' @change='technologiesClicked'><span class='label body'>Technologies</span>
+         <!-- <button id='btn-all' autofocus @click='allClicked'>All</button>
          <button id='btn-frontend' @click='frontendClicked'>Frontend</button>
          <button id='btn-backend' @click='backendClicked'>Backend</button>
-         <button id='btn-technologies' @click='technologiesClicked'>Technologies</button>
+         <button id='btn-technologies' @click='technologiesClicked'>Technologies</button> -->
          
         <div class='skills-container'>
         <SkillsItem v-show='displayAll' v-for='skill in skills' :name='skill.name' :key='skill.key'  :image='skill.image' :type='skill.type' />
@@ -14,11 +18,6 @@
         <SkillsItem v-show='displayBackend' v-for='skill in backend' :name='skill.name' :key='skill.key'  :image='skill.image' :type='skill.type' />
         <SkillsItem v-show='displayTechnologies' v-for='skill in technologies' :name='skill.name' :key='skill.key'  :image='skill.image' :type='skill.type' />
         </div>
-
-
-
-
-
 </div>
 </template>
 
@@ -54,8 +53,6 @@ export default {
             this.displayBackend = false;
         }
 
-
-
     },
     computed: {
         frontend()  {
@@ -74,7 +71,8 @@ export default {
             displayFrontend: false, 
             displayBackend: false, 
             displayTechnologies: false,
-            displayAll: true
+            displayAll: true,
+            selected: 'all'
         }
     },
     components: { SkillsItem }
@@ -88,7 +86,10 @@ export default {
     min-height: 850px
     button:focus
         background-color: #ff5d4c
-        
+    input 
+        margin-left: 20px
+    .label
+        font-size: 2.5rem
 
 .skills-container 
     max-width: 80%
