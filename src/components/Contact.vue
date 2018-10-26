@@ -50,9 +50,6 @@ import axios from 'axios'
         axios.post(URL, JSON.stringify(data))
           .then(response => console.log('aws response', response))
           .then(this.clearContactArea())
-
-
-        
       }
       
     }

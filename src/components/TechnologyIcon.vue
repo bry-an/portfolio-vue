@@ -10,8 +10,13 @@ export default {
 </script>
 <style lang="sass">
 .tech-icon-image
-    width: 50px
+    width: 100%
+    max-width: 25px
+    height: auto
     padding-right: 15px
+    @media (min-width: 600px)
+        max-width: 50px
+        
 </style>
 
 
