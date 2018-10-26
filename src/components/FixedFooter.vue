@@ -134,17 +134,6 @@ export default {
 input[type="text"] {
   margin-bottom: 25px;
 }
-/* input[type="text"]:valid, input[type="email"]:valid, textarea:valid {
-    border: 1px solid #ccc;
-}
-
-input[type="text"]:focus:invalid, input[type="email"]:focus:invalid, textarea:focus:invalid {
-    outline: none;
-}
-
-input[type="text"]:invalid, input[type="email"]:invalid, textarea:invalid {
-    box-shadow: 0 0 5px 1px red;
-} */
 
 form {
   margin: 0;
