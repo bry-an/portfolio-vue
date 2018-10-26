@@ -7,12 +7,10 @@
   <p>Contact me</p>
 
     <form>
-<!-- <label for="contact-name">Name</label> -->
     <input type = "text" id = "contact-section-name" name = "name" placeholder = "Name" required />
     <input type = "email" id = "contact-section-email" name = "email" placeholder = "Email" required />
-<!-- <label for="contact-message">Message</label>  -->
     <textarea v-on:submit.prevent id = "contact-section-message" name = "message" placeholder="Message" required />
-<input type = "submit" id="contact-section-submit-btn" value = "submit" v-on:click.prevent="submitContactForm" />
+<input type = "submit" id="contact-section-submit-btn" value = "submit" v-on:click.prevent="submitToApi" />
     </form>
 
 </div>
@@ -21,10 +19,11 @@
 
 
 <script>
+import axios from 'axios'
   export default {
     name: 'Contact',
     methods: {
-      submitContactForm: function() {
+      clearContactArea: function() {
             var contactBody = document.getElementById('contact-body');
             document.getElementById("contact-section-name").value = "";
             document.getElementById("contact-section-email").value = "";
@@ -37,7 +36,25 @@
             setTimeout(function() {
               submittedText.innerText=''
             }, 5000)
+      },
+      submitToApi: function() {
+        const URL = 'https://0zma21lu08.execute-api.us-east-1.amazonaws.com/production'
+        const name = document.getElementById('contact-section.name').val()
+        const email = document.getElementById('contact-section.email').val()
+        const message = document.getElementById('contact-section.message').val()
+        const data = {
+          name,
+          email, 
+          message
+        }
+        axios.post(URL, JSON.stringify(data))
+          .then(response => console.log('aws response', response))
+          .then(this.clearContactArea())
+
+
+        
       }
+      
     }
 
 }
