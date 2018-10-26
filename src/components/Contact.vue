@@ -47,18 +47,6 @@ import axios from 'axios'
           email, 
           message
         }
-        // $.ajax({
-        //   type: "POST", 
-        //   url: URL, 
-        //   crossDomain: 'true', 
-        //   contentType: "application/json; charset=utf-8",
-        //   data: JSON.stringify(data),
-
-        //   success: () => {
-        //     console.log('success')
-        //     this.clearContactArea()
-        //   }
-        // })
         axios.post(URL, JSON.stringify(data))
           .then(response => console.log('aws response', response))
           .then(this.clearContactArea())

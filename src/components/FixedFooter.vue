@@ -14,7 +14,7 @@
                 <input type = "email" id = "contact-email" name = "email" placeholder = "Email" required />
             <label for="contact-message">Message</label> 
                 <textarea v-on:submit.prevent id = "contact-message" name = "message" required />
-            <input type = "submit" id="contact-message-submit-btn" value = "submit" v-on:click.prevent="submitMessage" />
+            <input type = "submit" id="contact-message-submit-btn" value = "submit" v-on:click.prevent="submitToApi" />
                 </form>
                 </div>
         </div>
@@ -26,6 +26,7 @@
 
 
 <script>
+import axios from 'axios'
 export default {
   name: "FixedFooter",
   methods: {
@@ -55,7 +56,7 @@ export default {
       }
     },
 
-    submitMessage: function() {
+    clearFields: function() {
       var contactWindowBody = document.getElementById("contact-window-body");
       document.getElementById("contact-name").value = "";
       document.getElementById("contact-email").value = "";
@@ -71,6 +72,20 @@ export default {
       thanksBtn.innerText = "close";
       contactWindowBody.append(thanksBtn);
       thanksBtn.addEventListener("click", this.hideContactWindow);
+    },
+    submitToApi: function() {
+      const URL = 'https://0zma21lu08.execute-api.us-east-1.amazonaws.com/02/contactme'
+      const name = document.getElementById('contact-name').value
+      const email = document.getElementById('contact-email').value
+      const message = document.getElementById('contact-message').value
+      const data = {
+        name,
+        email, 
+        message
+      }
+      axios.post(URL, JSON.stringify(data))
+        .then(response => console.log('aws response', response))
+        .then(this.clearFields())
     }
   }
 };
