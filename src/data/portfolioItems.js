@@ -22,15 +22,17 @@ const portfolioItems =
             liveLink: 'https://thawing-fortress-55637.herokuapp.com/',
             id: 'nyt-clean'
         },
-        // {
-        //     name: 'QuickCal',
-        //     still: 'http://via.placeholder.com/500x281',
-        //     gif: '',
-        //     technologies: [],
-        //     githubLink: '',
-        //     liveLink: '',
-        //     id: 'quick-cal'
-        // },
+        {
+            name: 'QuickCal',
+            still: '/static/quickcal-demo-still.png',
+            gif: '/static/quickcal-demo.gif',
+            problem: "Online calendars tend to be bulky and overpowered for quick to-dos or short reminders. Where's a lighter option?",
+            solution: "QuickCal is a point-and-click style more traditional calendar, allowing users to jot down quick notes or events for each day in a clean interface, without the clutter of a full calendar suite.",
+            technologies: ['/static/vue-logo.png', '/static/mongo-logo.png'],
+            githubLink: 'https://github.com/bry-an/QuickCal',
+            liveLink: 'https://fierce-atoll-33119.herokuapp.com/',
+            id: 'quick-cal'
+        },
 
     ]
 
