@@ -12,7 +12,7 @@ export default {
   name: "Navbar",
   methods: {
     handleNavbarScroll(event) {
-      if (window.scrollY > 100)
+      if (window.scrollY > 10)
         document.querySelector(".menu").classList.add("menu-scrolled");
       else document.querySelector(".menu").classList.remove("menu-scrolled");
     },

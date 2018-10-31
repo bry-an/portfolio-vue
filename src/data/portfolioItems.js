@@ -12,11 +12,11 @@ const portfolioItems =
             id: 'weather-rider'
         },
         {
-            name: 'NYT Clean',
+            name: 'Clean NYT',
             gif: '/static/times-react-demo.gif',
             still: '/static/times-react-demo-still.png',
             problem: "Most news sites don't provide a clean interface for searching articles and saving them to read at the user's convenience.",
-            solution: "Readers can search for New York Times articles, with an optional date selection, see the results, and save articles for later, all in a snappy clutter-free interface on NYT Clean.",
+            solution: "Readers can search for New York Times articles, with an optional date selection, see the results, and save articles for later, all in a snappy clutter-free interface on Clean NYT.",
             technologies: ['/static/react-logo.png', '/static/mongo-logo.png'],
             githubLink: 'https://github.com/bry-an/times-react',
             liveLink: 'https://thawing-fortress-55637.herokuapp.com/',

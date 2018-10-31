@@ -6,11 +6,11 @@
 
 <p>I have built several full-stack web apps, including applications in React.js and Vue.js.
   I gained proficiency in the MERN stack at the University of Denver Web Development program, but 
-  continually challenge myself to learn new languages, web frameworks, and development tools. </p>
+  continually challenge myself to learn new languages, web frameworks, and development tools. My
+  diverse experience helps bring fresh perspective and real-world applicability to my programming. </p>
   <p>
     I am driven by the fact that there are more technologies than anyone could learn in a lifetime, 
-    so I'd better get going. If it's compiled or interpreted, I have my eye on it. 
-    I am full-stack through-and-through: 
+    so I'd better get going. I am full-stack through-and-through: 
     I enjoy perfecting low-level code to provide a satisfying, snappy user experience on the other side. 
     </p>
     <p>When otherwise at my keyboard, I am fascinated by anything that involves machine learning. 
@@ -18,7 +18,7 @@
         and hikes in the mountains. I also love reading and writing, and am a confessed news-junkie.</p>
 <p>Before web development, I honed my analytical skills working in aquatic toxicology, 
     and developed leadership and communication experience serving as campaign manager and 
-    communications director on a U.S. Congressional campaign. These diverse experiences inform a 
+    communications director on a U.S. Congressional campaign. These experiences inform a 
     practical, real-world approach to web development that is focused on solving problems and delivering a 
     positive user experience.</p>
 </div>

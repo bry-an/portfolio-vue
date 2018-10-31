@@ -8,7 +8,8 @@
     </div>
     <a :href='liveLink' target="_blank"><img :src='still' :id='id' :alt='name' 
         class='portfolio-item-img' @mouseover="animateGif(id)" @mouseout="stopGif(id)"/></a>
-            <a :href='githubLink' target="_blank"><img src='/static/github-logo.png' alt='github link' /></a>
+        <p class='portfolio-item-img-sub'>I'm a Gif. Move your mouse over me to animate, or click to visit the app.</p>
+            <a :href='githubLink' target="_blank"><img src='/static/github-logo.png' class='github-img' alt='github link' /></a>
     <ul>
         <li> 
             <h5>The Problem</h5>
@@ -50,15 +51,21 @@ export default {
 .portfolio-item
     font-family: "Raleway", "sans-serif"
     justify-self: center
+    text-align: center
     .portfolio-item-img
         border-radius: 3px
         width: 100%
-        max-width: 669px
+        max-width: 769px
         height: auto
         margin: 0 auto 10px auto
         border: 1px solid #ccc
         display: block
     
+    .portfolio-item-img-sub
+        font-size: 1.5rem !important
+        margin-bottom: 5px
+    .github-img
+        text-align: center
     .portfolio-item-heading
         font-size: 3rem
         text-align: center

@@ -1,6 +1,6 @@
 <template>
 <div id = "bryan">
-            <img src = "@/assets/images/background-brick-name.png" class = "responsive" />
+            <img id ='home-background' src = "@/assets/images/background-brick-name.png" class = "responsive" />
             </div>
 </template>
 
@@ -9,9 +9,10 @@
     name: 'Home',
 }
 </script>
-<style>
+<style lang="sass" scoped>
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
-
-
+#home-background
+  width: 100%
+  height: auto
 
 </style>

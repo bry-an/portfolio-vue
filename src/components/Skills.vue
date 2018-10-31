@@ -6,7 +6,7 @@
          <input type='radio' id='btn-all' v-model='selected' value='all' @change='allClicked'><span class='label body'>All</span>
          <input type='radio' id='btn-frontend' v-model='selected' value='frontend' @change='frontendClicked'><span class='label body'>Frontend</span>
          <input type='radio' id='btn-backend' v-model='selected' value='backend' @change='backendClicked'><span class='label body'>Backend</span>
-         <input type='radio' id='btn-technologies' v-model='selected' value='technologies' @change='technologiesClicked'><span class='label body'>Technologies</span>
+         <input type='radio' id='btn-technologies' v-model='selected' value='technologies' @change='technologiesClicked'><span class='label body'>Tools & Tech</span>
          <!-- <button id='btn-all' autofocus @click='allClicked'>All</button>
          <button id='btn-frontend' @click='frontendClicked'>Frontend</button>
          <button id='btn-backend' @click='backendClicked'>Backend</button>
