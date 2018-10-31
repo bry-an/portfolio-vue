@@ -17,81 +17,84 @@
         <li v-for='error in errors'>{{error}}</li>
       </ul>
     </p>
+    <p id='submitted-text' v-if='this.thanks'>
+      Thanks. We'll be in touch soon. 
+    </p>
 </div>
 </div>
 </template>
 
 
 <script>
-import axios from 'axios'
-  export default {
-    name: 'Contact',
-    data() {
-      return {
-        errors: [],
-        name: null, 
-        email: null, 
-        message: null
-
+import axios from "axios";
+export default {
+  name: "Contact",
+  data() {
+    return {
+      errors: [],
+      name: null,
+      email: null,
+      message: null,
+      thanks: false
+    };
+  },
+  methods: {
+    checkForm: function() {
+      this.errors = [];
+      if (
+        this.name &&
+        this.email &&
+        this.validEmail(this.email) &&
+        this.message
+      ) {
+        console.log("test passed");
+        this.submitToApi();
+        return;
+      }
+      this.errors = [];
+      if (!this.name) {
+        this.errors.push("Please enter your name");
+      }
+      if (!this.email) {
+        this.errors.push("Please enter an email address");
+      }
+      if (this.email && !this.validEmail(this.email)) {
+        this.errors.push("Please enter a valid email address");
+      }
+      if (!this.message) {
+        this.errors.push("Please enter a message");
       }
     },
-    methods: {
-      checkForm: function() {
-        if (this.name && this.email && this.validEmail(this.email) && this.message) {
-          console.log('test passed')
-          this.submitToApi()
-        }
-        this.errors = []
-        if (!this.name) {
-          this.errors.push("Please enter your name")
-        }
-        if (!this.email) {
-          this.errors.push("Please enter an email address")
-        }
-        if (this.email && !this.validEmail(this.email)) {
-          this.errors.push("Please enter a valid email address")
-        }
-        if (!this.message) {
-          this.errors.push("Please enter a message")
-        }
-      },
-      validEmail: function(email) {
+    validEmail: function(email) {
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
     },
-      clearContactArea: function() {
-            var contactBody = document.getElementById('contact-body');
-            document.getElementById("contact-section-name").value = "";
-            document.getElementById("contact-section-email").value = "";
-            document.getElementById("contact-section-message").value = "";
-
-            var submittedText = document.createElement('p');
-            submittedText.setAttribute("id", "submitted-text")
-            submittedText.innerText = "Thanks, we'll be in touch soon."
-            contactBody.appendChild(submittedText);
-            setTimeout(function() {
-              submittedText.innerText=''
-            }, 5000)
-      },
-      submitToApi: function() {
-        const URL = 'https://0zma21lu08.execute-api.us-east-1.amazonaws.com/02/contactme'
-        const name = this.name
-        const email = this.email
-        // if (email && !email.test(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/)) {
-        //   this.emailError()
-        // }
-        const message = this.message
-        const data = {
-          name,
-          email, 
-          message
-        }
-        axios.post(URL, JSON.stringify(data))
-          .then(response => console.log('aws response', response))
-          .then(this.clearContactArea())
-      },
+    clearContactArea: function() {
+      var contactBody = document.getElementById("contact-body");
+      (this.name = ""), (this.email = ""), (this.message = "");
+      this.thanks = true;
+      setTimeout(() => {
+        this.thanks = false;
+      }, 5000);
+    },
+    submitToApi: function() {
+      const URL =
+        "https://0zma21lu08.execute-api.us-east-1.amazonaws.com/02/contactme";
+      const name = this.name;
+      const email = this.email;
+      const message = this.message;
+      const data = {
+        name,
+        email,
+        message
+      };
+      axios
+        .post(URL, JSON.stringify(data))
+        .then(response => console.log("aws response", response))
+        .then(this.clearContactArea());
     }
-}
+  }
+};
 </script>
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto");
@@ -149,7 +152,7 @@ textarea {
 #submitted-text {
   font-size: 2rem;
 }
-#error-text {
+.error-text {
   font-size: 1.5rem;
   color: red;
 }
