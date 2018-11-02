@@ -17,7 +17,7 @@
             {{solution}}
         </li>
         <li>
-            <h5>Technologies</h5>
+            <h5>Primary Technologies</h5>
     <div class='technologies-list'>
         <TechnologyIcon v-for='icon in technologyIcons' :image='icon' :key='icon'/>
     </div>

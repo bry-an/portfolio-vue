@@ -115,5 +115,4 @@ export default {
         grid-gap: 5px
 
 
-
 </style>
