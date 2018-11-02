@@ -3,9 +3,6 @@
     <div class='portfolio-item-heading'>
         {{name}}
     </div>
-    <div class='technologies-list'>
-        <TechnologyIcon v-for='icon in technologyIcons' :image='icon' :key='icon'/>
-    </div>
     <a :href='liveLink' target="_blank"><img :src='still' :id='id' :alt='name' 
         class='portfolio-item-img' @mouseover="animateGif(id)" @mouseout="stopGif(id)"/></a>
         <p class='portfolio-item-img-sub'>I'm a Gif. Move your mouse over me to animate, or click to visit the app.</p>
@@ -19,6 +16,13 @@
             <h5>The Solution</h5>
             {{solution}}
         </li>
+        <li>
+            <h5>Technologies</h5>
+    <div class='technologies-list'>
+        <TechnologyIcon v-for='icon in technologyIcons' :image='icon' :key='icon'/>
+    </div>
+        </li>
+            
         <hr>
 
 
@@ -26,23 +30,33 @@
 </div>
 </template>
 <script>
-import TechnologyIcon from './TechnologyIcon'
+import TechnologyIcon from "./TechnologyIcon";
 export default {
   name: "PortfolioItem",
-  props: ["id", "name", "still", "gif", "technologies", "githubLink", "liveLink", "problem", "solution"],
+  props: [
+    "id",
+    "name",
+    "still",
+    "gif",
+    "technologies",
+    "githubLink",
+    "liveLink",
+    "problem",
+    "solution"
+  ],
   methods: {
-      animateGif: function(el) {
-          document.getElementById(el).setAttribute('src', this.gif)
-      },
-      stopGif: function(el) {
-          document.getElementById(el).setAttribute('src', this.still)
-      }
-  }, 
+    animateGif: function(el) {
+      document.getElementById(el).setAttribute("src", this.gif);
+    },
+    stopGif: function(el) {
+      document.getElementById(el).setAttribute("src", this.still);
+    }
+  },
   components: { TechnologyIcon },
-  data () {
-      return {
-          technologyIcons: this.technologies
-      }
+  data() {
+    return {
+      technologyIcons: this.technologies
+    };
   }
 };
 </script>

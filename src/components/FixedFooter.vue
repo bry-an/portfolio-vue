@@ -10,13 +10,23 @@
             <div id = "contact-window-body">
                 <form>
             <label for="contact-name">Introduce yourself</label>
-                <input type = "text" id = "contact-name" name = "name" placeholder = "Name" required />
-                <input type = "email" id = "contact-email" name = "email" placeholder = "Email" required />
+                <input type = "text" v-model='name' id = "contact-name" name = "name" placeholder = "Name" required />
+                <input type = "email" v-model='email' id = "contact-email" name = "email" placeholder = "Email" required />
             <label for="contact-message">Message</label> 
-                <textarea v-on:submit.prevent id = "contact-message" name = "message" required />
-            <input type = "submit" id="contact-message-submit-btn" value = "submit" v-on:click.prevent="submitToApi" />
+                <textarea v-model='message' v-on:submit.prevent id = "contact-message" name = "message" required />
+            <input type = "submit" id="contact-message-submit-btn" value = "submit" v-on:click.prevent="checkForm" />
                 </form>
                 </div>
+        <p class='error-text' v-if='errors.length'>
+          <ul>
+            <li v-for='error in errors'>{{error}}</li>
+          </ul>
+        </p>
+        <p id='thanks-message' v-if='this.thanks'>
+          Thanks. Your message has been submitted.
+        </p>
+        <button id='thanks-message-button' v-if='this.thanks' v-on:click='this.hideContactWindow'>close</button>
+
         </div>
         <button v-on:click="displayContactWindow" id = "footer-contact-button"><i class = "fas fa-envelope"></i>Message</button>
 </div>
@@ -26,13 +36,23 @@
 
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 export default {
   name: "FixedFooter",
+  data() {
+    return {
+      errors: [],
+      name: null,
+      email: null,
+      message: null,
+      thanks: false
+    };
+  },
   methods: {
     displayContactWindow: function() {
       document.getElementById("contact-window").classList.add("contact-window");
       document.getElementById("footer-contact-button").style.display = "none";
+      this.thanks = false;
     },
     hideContactWindow: function() {
       var contactWindowBody = document.getElementById("contact-window-body");
@@ -54,38 +74,59 @@ export default {
           document.getElementById("thanks-message-button")
         );
       }
+      this.thanks = false;
+    },
+    checkForm: function() {
+      this.errors = [];
+      if (
+        this.name &&
+        this.email &&
+        this.validEmail(this.email) &&
+        this.message
+      ) {
+        this.submitToApi();
+        return;
+      }
+      this.errors = [];
+      if (!this.name) {
+        this.errors.push("Please enter your name");
+      }
+      if (!this.email) {
+        this.errors.push("Please enter an email address");
+      }
+      if (this.email && !this.validEmail(this.email)) {
+        this.errors.push("Please enter a valid email address");
+      }
+      if (!this.message) {
+        this.errors.push("Please enter a message");
+      }
+    },
+    validEmail: function(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
     },
 
     clearFields: function() {
-      var contactWindowBody = document.getElementById("contact-window-body");
-      document.getElementById("contact-name").value = "";
-      document.getElementById("contact-email").value = "";
-      document.getElementById("contact-message").value = "";
-
-      var thankYouText = document.createElement("p");
-      thankYouText.setAttribute("id", "thanks-message");
-      thankYouText.innerText = "Thank you. Your message has been submitted.";
-      contactWindowBody.appendChild(thankYouText);
-
-      var thanksBtn = document.createElement("button");
-      thanksBtn.setAttribute("id", "thanks-message-button");
-      thanksBtn.innerText = "close";
-      contactWindowBody.append(thanksBtn);
-      thanksBtn.addEventListener("click", this.hideContactWindow);
+      this.thanks = true;
+      this.email = "";
+      this.name = "";
+      this.message = "";
     },
     submitToApi: function() {
-      const URL = 'https://0zma21lu08.execute-api.us-east-1.amazonaws.com/02/contactme'
-      const name = document.getElementById('contact-name').value
-      const email = document.getElementById('contact-email').value
-      const message = document.getElementById('contact-message').value
+      const URL =
+        "https://0zma21lu08.execute-api.us-east-1.amazonaws.com/02/contactme";
+      const name = this.name;
+      const email = this.email;
+      const message = this.message;
       const data = {
         name,
-        email, 
+        email,
         message
-      }
-      axios.post(URL, JSON.stringify(data))
-        .then(response => console.log('aws response', response))
-        .then(this.clearFields())
+      };
+      axios
+        .post(URL, JSON.stringify(data))
+        .then(response => console.log("aws response", response))
+        .then(this.clearFields());
     }
   }
 };
@@ -159,10 +200,14 @@ form {
   text-align: center;
 }
 
+.error-text {
+  color: red;
+  margin-bottom: 0;
+}
+
 #thanks-message-button {
-  margin: 0 auto 10px auto;
-  height: 20px;
-  padding: 0;
+  margin: 0 auto 0 auto;
+  padding-bottom: 5px;
   font-size: 1rem;
   border: none;
   display: block;
@@ -197,5 +242,8 @@ form {
 .fa-envelope {
   font-size: 15px;
   padding: 3px;
+}
+ul {
+  margin-bottom: 0;
 }
 </style>
