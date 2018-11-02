@@ -3,10 +3,20 @@
     <h2 id="section-title">MY SKILLS</h2>
     <p>I might feel most alive when I'm neck-deep in unfamiliar code, but there are many skills
          and technologies that I have experience with.</p>
+         <div id='tech-input-container'>
+             <div class='tech-input'>
          <input type='radio' id='btn-all' v-model='selected' value='all' @change='allClicked'><span class='label body'>All</span>
+             </div>
+             <div class='tech-input'>
          <input type='radio' id='btn-frontend' v-model='selected' value='frontend' @change='frontendClicked'><span class='label body'>Frontend</span>
+             </div>
+             <div class='tech-input'>
          <input type='radio' id='btn-backend' v-model='selected' value='backend' @change='backendClicked'><span class='label body'>Backend</span>
+             </div>
+             <div class='tech-input'>
          <input type='radio' id='btn-technologies' v-model='selected' value='technologies' @change='technologiesClicked'><span class='label body'>Tools & Tech</span>
+             </div>
+         </div>
          <!-- <button id='btn-all' autofocus @click='allClicked'>All</button>
          <button id='btn-frontend' @click='frontendClicked'>Frontend</button>
          <button id='btn-backend' @click='backendClicked'>Backend</button>
@@ -83,7 +93,7 @@ export default {
 <style lang="sass">
 
 #skills
-    min-height: 850px
+    min-height: 930px
     button:focus
         background-color: #ff5d4c
     input 
@@ -91,13 +101,18 @@ export default {
     .label
         font-size: 2.5rem
 
-.skills-container 
-    max-width: 80%
-    margin: auto
-    display: grid
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
-    grid-gap: 5px
-    margin-top: 50px
+    .skills-container 
+        max-width: 80%
+        margin: auto
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+        grid-gap: 5px
+        margin-top: 50px
+    
+    #tech-input-container
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(155px, 1fr))
+        grid-gap: 5px
 
 
 

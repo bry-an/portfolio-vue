@@ -54,5 +54,6 @@ export default {
     text-align: center
     font-family: "Raleway", "sans-serif"
     font-size: 1.8rem
+    line-height: 3rem
 
 </style>

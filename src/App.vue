@@ -62,6 +62,7 @@ export default {
 
 .body-container {
   width: 90%;
+  max-width: 1200px;
   margin: auto;
 }
 

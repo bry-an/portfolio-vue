@@ -4,23 +4,22 @@
 <div id = "approach">
     <h2 id = "section-title">ABOUT ME</h2>
 
-<p>I have built several full-stack web apps, including applications in React.js and Vue.js.
-  I gained proficiency in the MERN stack at the University of Denver Web Development program, but 
-  continually challenge myself to learn new languages, web frameworks, and development tools. My
-  diverse experience helps bring fresh perspective and real-world applicability to my programming. </p>
+<p>I'm a full-stack web developer with experience building apps in React.js and Vue.js.
+  I gained proficiency in the MERN stack at the University of Denver Web Development program, but I
+  continually challenge myself to learn new languages, frameworks, and tools, driven by my passion
+  for finding novel solutions to complex problems.</p>
   <p>
-    I am driven by the fact that there are more technologies than anyone could learn in a lifetime, 
-    so I'd better get going. I am full-stack through-and-through: 
-    I enjoy perfecting low-level code to provide a satisfying, snappy user experience on the other side. 
+     Whether working deep in server-side code or styling an interface, my end goal is always 
+     to provide a visually-appealing, snappy user experience on the front end.
     </p>
-    <p>When otherwise at my keyboard, I am fascinated by anything that involves machine learning. 
-        Off the keyboard, I enjoy getting outside for long gravel bike rides, trail runs, 
-        and hikes in the mountains. I also love reading and writing, and am a confessed news-junkie.</p>
-<p>Before web development, I honed my analytical skills working in aquatic toxicology, 
+    <p>Beyond web development, I am fascinated by anything that involves machine learning. 
+        Off the keyboard, I enjoy gravel bike rides and trail runs. I love reading and writing, and am a confessed news-junkie.</p>
+<p>Previously, I honed my analytical skills working in aquatic toxicology, 
     and developed leadership and communication experience serving as campaign manager and 
-    communications director on a U.S. Congressional campaign. These experiences inform a 
-    practical, real-world approach to web development that is focused on solving problems and delivering a 
-    positive user experience.</p>
+    communications director on a U.S. Congressional campaign.</p>
+    <p> These experiences inform a 
+    practical, real-world approach to web development that's focused on solving problems and delivering a 
+    satisfying user experience.</p>
 </div>
 <Skills />
 </div>
@@ -59,8 +58,8 @@ export default {
 
 #approach,
 p {
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: center;
+  line-height: 4.5rem;
 }
 
 @media (min-width: 400px) {
@@ -75,6 +74,12 @@ p {
   #approach {
     font-size: 3rem;
   }
+#approach,
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 4.5rem;
+}
 }
 
 @media (min-width: 900px) {
