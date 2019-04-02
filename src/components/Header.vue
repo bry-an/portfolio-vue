@@ -1,13 +1,13 @@
 <template>
-<div id = "bryan">
-            <img id ='home-background' src = "@/assets/images/background-brick-name.png" class = "responsive" />
-            </div>
+  <div id="bryan">
+    <img id="home-background" src="@/assets/images/background-brick-name.png" class="responsive">
+  </div>
 </template>
 
 <script>
-  export default {
-    name: 'Home',
-}
+export default {
+  name: "Header"
+};
 </script>
 <style lang="sass" scoped>
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');

@@ -1,27 +1,27 @@
 
 <template>
   <div id="app">
-    <div class = "top-container">
+    <div class="top-container">
       <Navbar/>
-    <!-- <router-link to="/firstroute/bry">Go To First Route</router-link> -->
-    <!-- below name specification is not necessary but would allow params to be passed if specified in route path as :param -->
-    <!-- <router-link :to="{name: 'FirstRoute'}">FirstRoute</router-link> -->
-    <!-- router-view is for anything that you want for a different page -->
-    <FixedFooter/>
-    <Home/>
+      <!-- <router-link to="/firstroute/bry">Go To First Route</router-link> -->
+      <!-- below name specification is not necessary but would allow params to be passed if specified in route path as :param -->
+      <!-- <router-link :to="{name: 'FirstRoute'}">FirstRoute</router-link> -->
+      <!-- router-view is for anything that you want for a different page -->
+      <FixedFooter/>
+      <Header/>
     </div>
     <div class="body-container">
-    <About/>
-    <Portfolio/>
-    <Contact/>
+      <About/>
+      <Portfolio/>
+      <Contact/>
     </div>
     <BottomFooter/>
-    </div>
+  </div>
 </template>
 
 <script>
 import Navbar from "./components/NavBar.vue";
-import Home from "./components/Home";
+import Header from "./components/Header";
 import About from "./components/About";
 import FixedFooter from "./components/FixedFooter";
 import Portfolio from "./components/Portfolio";
@@ -33,7 +33,7 @@ export default {
     Navbar,
     About,
     FixedFooter,
-    Home,
+    Header,
     Portfolio,
     Contact,
     BottomFooter
@@ -61,8 +61,7 @@ export default {
 }
 
 .body-container {
-  width: 90%;
-  max-width: 1200px;
+  width: 95%;
   margin: auto;
 }
 

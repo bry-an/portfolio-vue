@@ -1,33 +1,41 @@
 <template>
-<div class='portfolio-item'>
-    <div class='portfolio-item-heading'>
-        {{name}}
-    </div>
-    <a :href='liveLink' target="_blank"><img :src='still' :id='id' :alt='name' 
-        class='portfolio-item-img' @mouseover="animateGif(id)" @mouseout="stopGif(id)"/></a>
-        <p class='portfolio-item-img-sub'>I'm a Gif. Move your mouse over me to animate, or click to visit the app.</p>
-            <a :href='githubLink' target="_blank"><img src='/static/github-logo.png' class='github-img' alt='github link' /></a>
+  <div class="portfolio-item">
+    <div class="portfolio-item-heading">{{name}}</div>
+    <a :href="liveLink" target="_blank">
+      <img
+        :src="still"
+        :id="id"
+        :alt="name"
+        class="portfolio-item-img"
+        @mouseover="animateGif(id)"
+        @mouseout="stopGif(id)"
+      >
+    </a>
+    <p
+      class="portfolio-item-img-sub"
+    >I'm a Gif. Move your mouse over me to animate, or click to visit the app.</p>
+    <a :href="githubLink" target="_blank">
+      <img src="/static/github-logo.png" class="github-img" alt="github link">
+    </a>
     <ul>
-        <li> 
-            <h5>The Problem</h5>
-            {{problem}}
-        </li>
-        <li> 
-            <h5>The Solution</h5>
-            {{solution}}
-        </li>
-        <li>
-            <h5>Primary Technologies</h5>
-    <div class='technologies-list'>
-        <TechnologyIcon v-for='icon in technologyIcons' :image='icon' :key='icon'/>
-    </div>
-        </li>
-            
-        <hr>
+      <li>
+        <h5>The Problem</h5>
+        {{problem}}
+      </li>
+      <li>
+        <h5>The Solution</h5>
+        {{solution}}
+      </li>
+      <li>
+        <h5>Primary Technologies</h5>
+        <div class="technologies-list">
+          <TechnologyIcon v-for="icon in technologyIcons" :image="icon" :key="icon"/>
+        </div>
+      </li>
 
-
+      <hr>
     </ul>
-</div>
+  </div>
 </template>
 <script>
 import TechnologyIcon from "./TechnologyIcon";
@@ -60,7 +68,7 @@ export default {
   }
 };
 </script>
-<style lang="sass">
+<style lang="sass" scoped>
 
 .portfolio-item
     font-family: "Raleway", "sans-serif"

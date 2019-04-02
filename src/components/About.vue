@@ -3,15 +3,41 @@
   <div id="about">
     <div id="approach">
       <h2 id="section-title">ABOUT ME</h2>
-
-      <p>
-        I'm a JavaScript developer eager to tackle confounding problems, I have experience throughout the web
-        stack building enterprise software in a collaborative, agile workplace.
-        I value effective communication: verbal, written, and semantic. I'm passionate about coding,
-        both on and off the keyboard. I thrive when I'm challenged to learn new technologies and surpass what's
-        comfortable. Currently, I'm enjoying learning the finer points of Vue.js
-      </p>
-      <a @click="readMore = !readMore">{{readMore? "": "read more..."}}</a>
+      <div class="row">
+        <div class="six columns">
+          <p>
+            A JavaScript developer eager to tackle confounding problems, I have experience throughout the web
+            stack building enterprise software in a collaborative, agile workplace.
+            I value effective communication: verbal, written, and semantic. I'm passionate about coding,
+            both on and off the keyboard. I thrive when I'm challenged to learn new technologies and surpass what's
+            comfortable. Currently, I'm enjoying learning the finer points of Vue.js
+          </p>
+          <a @click="readMore = !readMore">{{readMore? "...read less": "read more..."}}</a>
+        </div>
+        <div class="six columns">
+          <h3 class="subheading">HIGHLIGHTS</h3>
+          <div class="highlights">
+            <ul>
+              <li>
+                Full Stack Vue.js developer at
+                <a
+                  href="https://www.oppenheimerfunds.com/"
+                  target="_new"
+                >OFI</a>. Contract renewed until company buy-out.
+              </li>
+              <li>Helped build employee provisioning application at OFI, saving company an est. $10m/year</li>
+              <li>Led project to refactor large older application, migrated to new codebase at OFI.</li>
+              <li>
+                Full Stack Web Development certificate from
+                <a
+                  href="https://bootcamp.du.edu/coding/curriculum/"
+                  target="_new"
+                >University of Denver</a>.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <div v-if="readMore" transition="expand">
         <p>
           Beyond web development, I am fascinated by anything that involves machine learning and have recently
@@ -22,7 +48,11 @@
             target="_new"
           >weekly meetup</a> I co-lead on technical problem-solving called Coders' Workshop,
           I enjoy sharing my knowledge with -- and learning from -- fellow developers.
-          Off the keyboard, I enjoy gravel bike rides and trail runs.
+          Off the keyboard, I enjoy gravel bike rides (check out my
+          <a
+            href="https://bry-an.github.io/weather-rider/"
+            target="_new"
+          >student project</a> for getting the weather along your bike route) and trail runs.
           I love reading and writing, and am a confessed news-junkie.
         </p>
         <p>
@@ -34,7 +64,6 @@
           These experiences inform a practical, real-world approach to development that's focused on
           solving problems and delivering a satisfying user experience.
         </p>
-        <a @click="readMore = !readMore">{{readMore? "...read less": ""}}</a>
       </div>
     </div>
     <Skills/>
@@ -57,18 +86,16 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
-.expand-transition {
-  transition: all 0.3s ease;
-  height: 30px;
-  padding: 10px;
-  background-color: #eee;
-  overflow: hidden;
+.highlights,
+li {
+  text-align: justify;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  text-justify: inter-word;
 }
-.expand-enter,
-.expand-leave {
-  height: 0;
-  padding: 0 10px;
-  opacity: 0;
+.subheading {
+  text-align: center;
+  font-family: "Roboto", "sans-serif";
 }
 a {
   cursor: pointer;
@@ -111,13 +138,13 @@ p {
     font-size: 10rem;
   }
   #approach {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   #approach,
   p {
     text-align: justify;
     text-justify: inter-word;
-    line-height: 4.5rem;
+    line-height: 4rem;
   }
 }
 

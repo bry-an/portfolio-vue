@@ -34,7 +34,7 @@ const skills =
             name: 'jQuery',
             image: '/static/jquery-logo.png',
             type: ['frontend'],
-            key: 21 
+            key: 21
         },
         {
             name: 'Version Control with Git/GitHub',
@@ -55,19 +55,13 @@ const skills =
             key: 8
         },
         {
-            name: 'Redux',
-            image: '/static/redux-logo.png',
-            type: ['frontend'],
-            key: 9
-        },
-        {
             name: 'Vue.js & Vuex',
             image: '/static/vue-logo.png',
             type: ['frontend'],
             key: 10
         },
         {
-            name: 'SQL/MySQL & Sequelize',
+            name: 'MySQL, PostgreSQL& Sequelize',
             image: '/static/sql-logo.png',
             type: ['backend'],
             key: 11
@@ -79,19 +73,7 @@ const skills =
             key: 12
         },
         {
-            name: 'GraphQL',
-            image: '/static/graphql-logo.png',
-            type: ['backend'],
-            key: 13
-        },
-        {
-            name: 'Next.js',
-            image: '/static/next-logo.png',
-            type: ['frontend', 'technologies'],
-            key: 14
-        },
-        {
-            name: 'Test-driven development: Mocha/Chai & Jest',
+            name: 'Mocha/Chai & Jest',
             image: '/static/mocha-logo.png',
             type: ['technologies'],
             key: 15
@@ -103,7 +85,7 @@ const skills =
             key: 16
         },
         {
-            name: 'AWS: S3, EC2, Lambda',
+            name: 'AWS: S3, Elastic Beanstalk, Lambda',
             image: '/static/aws-logo.png',
             type: ['backend', 'technologies'],
             key: 17
@@ -125,6 +107,24 @@ const skills =
             image: '/static/google-logo.png',
             type: ['technologies'],
             key: 20
+        },
+        {
+            name: 'Microsoft SharePoint',
+            image: 'http://via.placeholder.com/300',
+            type: ['technologies', 'backend'],
+            key: 21
+        },
+        {
+            name: 'Agile Development',
+            image: 'http://via.placeholder.com/300',
+            type: ['technologies'],
+            key: 22
+        },
+        {
+            name: 'Loopback.js',
+            image: 'http://via.placeholder.com/300',
+            type: ['backend', 'technologies'],
+            key: 23
         },
     ]
 
