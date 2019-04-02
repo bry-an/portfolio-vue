@@ -1,28 +1,44 @@
 
 <template>
-<div id="about">
-<div id = "approach">
-    <h2 id = "section-title">ABOUT ME</h2>
+  <div id="about">
+    <div id="approach">
+      <h2 id="section-title">ABOUT ME</h2>
 
-<p>I'm a full-stack web developer with experience building apps in React.js and Vue.js.
-  I gained proficiency in the MERN stack at the University of Denver Web Development program, but I
-  continually challenge myself to learn new languages, frameworks, and tools, driven by my passion
-  for finding novel solutions to complex problems.</p>
-  <p>
-     Whether working deep in server-side code or styling an interface, my end goal is always 
-     to provide a visually-appealing, snappy user experience on the front end.
-    </p>
-    <p>Beyond web development, I am fascinated by anything that involves machine learning. 
-        Off the keyboard, I enjoy gravel bike rides and trail runs. I love reading and writing, and am a confessed news-junkie.</p>
-<p>Previously, I honed my analytical skills working in aquatic toxicology, 
-    and developed leadership and communication experience serving as campaign manager and 
-    communications director on a U.S. Congressional campaign.</p>
-    <p> These experiences inform a 
-    practical, real-world approach to web development that's focused on solving problems and delivering a 
-    satisfying user experience.</p>
-</div>
-<Skills />
-</div>
+      <p>
+        I'm a JavaScript developer eager to tackle confounding problems, I have experience throughout the web
+        stack building enterprise software in a collaborative, agile workplace.
+        I value effective communication: verbal, written, and semantic. I'm passionate about coding,
+        both on and off the keyboard. I thrive when I'm challenged to learn new technologies and surpass what's
+        comfortable. Currently, I'm enjoying learning the finer points of Vue.js
+      </p>
+      <a @click="readMore = !readMore">{{readMore? "": "read more..."}}</a>
+      <div v-if="readMore" transition="expand">
+        <p>
+          Beyond web development, I am fascinated by anything that involves machine learning and have recently
+          discovered the expressiveness of Python.
+          In a
+          <a
+            href="https://www.meetup.com/Bootcampers-Collective/"
+            target="_new"
+          >weekly meetup</a> I co-lead on technical problem-solving called Coders' Workshop,
+          I enjoy sharing my knowledge with -- and learning from -- fellow developers.
+          Off the keyboard, I enjoy gravel bike rides and trail runs.
+          I love reading and writing, and am a confessed news-junkie.
+        </p>
+        <p>
+          Previously, I honed my analytical skills working in aquatic toxicology,
+          and developed leadership and communication experience serving as campaign manager and
+          communications director on a U.S. Congressional campaign.
+        </p>
+        <p>
+          These experiences inform a practical, real-world approach to development that's focused on
+          solving problems and delivering a satisfying user experience.
+        </p>
+        <a @click="readMore = !readMore">{{readMore? "...read less": ""}}</a>
+      </div>
+    </div>
+    <Skills/>
+  </div>
 </template>
 
 
@@ -30,11 +46,34 @@
 import Skills from "./skills";
 export default {
   name: "About",
+  data() {
+    return {
+      readMore: false
+    };
+  },
   components: { Skills }
 };
 </script>
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+
+.expand-transition {
+  transition: all 0.3s ease;
+  height: 30px;
+  padding: 10px;
+  background-color: #eee;
+  overflow: hidden;
+}
+.expand-enter,
+.expand-leave {
+  height: 0;
+  padding: 0 10px;
+  opacity: 0;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
 
 #section-title {
   color: #444;
@@ -74,12 +113,12 @@ p {
   #approach {
     font-size: 3rem;
   }
-#approach,
-p {
-  text-align: justify;
-  text-justify: inter-word;
-  line-height: 4.5rem;
-}
+  #approach,
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 4.5rem;
+  }
 }
 
 @media (min-width: 900px) {
