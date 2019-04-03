@@ -48,11 +48,11 @@
             target="_new"
           >weekly meetup</a> I co-lead on technical problem-solving called Coders' Workshop,
           I enjoy sharing my knowledge with -- and learning from -- fellow developers.
-          Off the keyboard, I enjoy gravel bike rides (check out my
+          Off the keyboard, I enjoy gravel bike rides (I made an
           <a
             href="https://bry-an.github.io/weather-rider/"
             target="_new"
-          >student project</a> for getting the weather along your bike route) and trail runs.
+          >app</a> for getting the weather along your bike route when I was a student) and trail runs.
           I love reading and writing, and am a confessed news-junkie.
         </p>
         <p>
@@ -86,10 +86,10 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
-.highlights,
+.highlights
 li {
   text-align: justify;
-  font-size: 2.5rem;
+  font-size: 2.5rem !important;
   line-height: 3rem;
   text-justify: inter-word;
 }

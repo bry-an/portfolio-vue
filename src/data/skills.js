@@ -110,19 +110,19 @@ const skills =
         },
         {
             name: 'Microsoft SharePoint',
-            image: 'http://via.placeholder.com/300',
+            image: '/static/sharepoint-logo.png',
             type: ['technologies', 'backend'],
             key: 21
         },
         {
             name: 'Agile Development',
-            image: 'http://via.placeholder.com/300',
+            image: 'static/agile-logo.png',
             type: ['technologies'],
             key: 22
         },
         {
             name: 'Loopback.js',
-            image: 'http://via.placeholder.com/300',
+            image: 'static/loopback-logo.png',
             type: ['backend', 'technologies'],
             key: 23
         },

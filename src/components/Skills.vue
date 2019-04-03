@@ -113,15 +113,15 @@ export default {
   },
   computed: {
     frontend() {
-      return this.skills.filter(skill => skill.type.indexOf("frontend") !== -1);
+      return Object.freeze(this.skills.filter(skill => skill.type.indexOf("frontend") !== -1));
     },
     backend() {
-      return this.skills.filter(skill => skill.type.indexOf("backend") !== -1);
+      return Object.freeze(this.skills.filter(skill => skill.type.indexOf("backend") !== -1));
     },
     technologies() {
-      return this.skills.filter(
+      return Object.freeze(this.skills.filter(
         skill => skill.type.indexOf("technologies") !== -1
-      );
+      ));
     }
   },
   data() {

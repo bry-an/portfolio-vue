@@ -1,6 +1,6 @@
 <template>
   <div id="bryan">
-    <img id="home-background" src="@/assets/images/background-brick-name.png" class="responsive">
+    <img id="home-background" src="@/assets/images/background-brick-name2.png" class="responsive">
   </div>
 </template>
 

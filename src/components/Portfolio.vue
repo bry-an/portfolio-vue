@@ -92,6 +92,7 @@ export default {
 <style lang="sass">
 
 @import url("https://fonts.googleapis.com/css?family=Roboto")
+@import url("https://fonts.googleapis.com/css?family=Raleway")
 
 #portfolio 
   max-width: 80%
@@ -100,6 +101,8 @@ export default {
   grid-template-colums: repeat(auto-fit, minmax(200px, 1fr))
   grid-gap: 10px
   margin-top: 40px
+  font-family: "Raleway", "sans-serif"
+
   p
     text-align: center
     font-family: "Raleway", "sans-serif"

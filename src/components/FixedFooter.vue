@@ -5,7 +5,7 @@
         <div id = "contact-window" class = "contact-window-hidden">
             <!--use swapComponent method with v-is: eventually: https://stackoverflow.com/questions/39391218/vuejs-swap-component-on-click-->
             <div id = "contact-window-header"> contact
-            <button v-on:click="hideContactWindow" id = "hide-contact-button"> &mdash; </button>
+            <button @click="hideContactWindow" id = "hide-contact-button"> &mdash; </button>
             </div>
             <div id = "contact-window-body">
                 <form>
@@ -28,7 +28,7 @@
         <button id='thanks-message-button' v-if='this.thanks' v-on:click='this.hideContactWindow'>close</button>
 
         </div>
-        <button v-on:click="displayContactWindow" id = "footer-contact-button"><i class = "fas fa-envelope"></i>Message</button>
+        <button v-if="!windowOpen" @click="displayContactWindow" id = "footer-contact-button"><i class = "fas fa-envelope"></i>Message</button>
 </div>
 
 
@@ -45,16 +45,20 @@ export default {
       name: null,
       email: null,
       message: null,
-      thanks: false
+      thanks: false,
+      windowOpen: false
     };
   },
   methods: {
-    displayContactWindow: function() {
+    displayContactWindow() {
+      this.windowOpen = true
       document.getElementById("contact-window").classList.add("contact-window");
       document.getElementById("footer-contact-button").style.display = "none";
       this.thanks = false;
     },
-    hideContactWindow: function() {
+    hideContactWindow() {
+      this.windowOpen = false
+      this.errors = []
       var contactWindowBody = document.getElementById("contact-window-body");
       document
         .getElementById("contact-window")
@@ -76,7 +80,7 @@ export default {
       }
       this.thanks = false;
     },
-    checkForm: function() {
+    checkForm() {
       this.errors = [];
       if (
         this.name &&
@@ -101,18 +105,18 @@ export default {
         this.errors.push("Please enter a message");
       }
     },
-    validEmail: function(email) {
+    validEmail(email) {
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
     },
 
-    clearFields: function() {
+    clearFields() {
       this.thanks = true;
       this.email = "";
       this.name = "";
       this.message = "";
     },
-    submitToApi: function() {
+    submitToApi() {
       const URL =
         "https://0zma21lu08.execute-api.us-east-1.amazonaws.com/02/contactme";
       const name = this.name;
@@ -202,6 +206,7 @@ form {
 
 .error-text {
   color: red;
+  font-size: 1rem;
   margin-bottom: 0;
 }
 
@@ -245,5 +250,10 @@ form {
 }
 ul {
   margin-bottom: 0;
+}
+li {
+  font-size: 1.8rem !important;
+  margin-bottom: 0;
+  margin: 0 10px 0 10px
 }
 </style>
