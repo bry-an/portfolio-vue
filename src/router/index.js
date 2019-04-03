@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import App from '@/App'
 import StudentProjects from "@/components/StudentProjects"
+import MainAbout from "@/views/MainAbout"
 //@ means 'from root of project'
 
 Vue.use(Router)
@@ -11,12 +12,19 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: App
+      component: App,
+      children: [
+        {
+          path: "/",
+          component: MainAbout
+        },
+        {
+          path: "/projects",
+          component: StudentProjects
+        }
+      ]
     },
-    {
-      path: '/studentProjects',
-      component: StudentProjects
-    }
+
   ],
   mode: 'history'
 })

@@ -12,9 +12,11 @@ export default {
   name: "Navbar",
   methods: {
     handleNavbarScroll(event) {
-      if (window.scrollY > 10)
+      if (this.$route.path !== "/") {
         document.querySelector(".menu").classList.add("menu-scrolled");
-      else document.querySelector(".menu").classList.remove("menu-scrolled");
+      } else if (window.scrollY > 10) {
+        document.querySelector(".menu").classList.add("menu-scrolled");
+      } else document.querySelector(".menu").classList.remove("menu-scrolled");
     },
     handleAnchorScroll(id) {
       document.getElementById(id).scrollIntoView({

@@ -7,35 +7,24 @@
       <!-- below name specification is not necessary but would allow params to be passed if specified in route path as :param -->
       <!-- <router-link :to="{name: 'FirstRoute'}">FirstRoute</router-link> -->
       <!-- router-view is for anything that you want for a different page -->
-      <FixedFooter/>
-      <Header/>
     </div>
-    <div class="body-container">
-      <About/>
-      <Portfolio/>
-      <Contact/>
-    </div>
+    <FixedFooter/>
+    <router-view/>
     <BottomFooter/>
   </div>
 </template>
 
 <script>
 import Navbar from "./components/NavBar.vue";
-import Header from "./components/Header";
-import About from "./components/About";
+import MainAbout from "@/views/MainAbout.vue";
 import FixedFooter from "./components/FixedFooter";
-import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact";
+
 import BottomFooter from "./components/BottomFooter";
 export default {
   name: "App",
   components: {
     Navbar,
-    About,
     FixedFooter,
-    Header,
-    Portfolio,
-    Contact,
     BottomFooter
   }
 };

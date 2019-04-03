@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="student-projects">
     <PortfolioItem
       v-for="item in portfolioItems"
       :key="item.name"
@@ -26,7 +26,13 @@ export default {
       portfolioItems
     };
   },
-  components: PortfolioItem
+  components: { PortfolioItem }
 };
 </script>
+<style lang="sass" scoped>
+.student-projects
+    padding-top: 70px
+</style>
+
+
 
