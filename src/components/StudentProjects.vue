@@ -1,5 +1,7 @@
 <template>
   <div class="student-projects">
+    <p>Back from when I was working on my full stack bonafides</p>
+    
     <PortfolioItem
       v-for="item in portfolioItems"
       :key="item.name"
@@ -31,7 +33,11 @@ export default {
 </script>
 <style lang="sass" scoped>
 .student-projects
-    padding-top: 70px
+  font-family: "Raleway", "sans-serif";
+  padding-top: 70px
+  p
+    text-align: center
+    font-size: 2rem
 </style>
 
 

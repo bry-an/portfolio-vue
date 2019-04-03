@@ -11,19 +11,19 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
-      component: App,
-      children: [
-        {
-          path: "/",
-          component: MainAbout
-        },
-        {
-          path: "/projects",
-          component: StudentProjects
-        }
-      ]
+      path: '*',
+      redirect: { name: "home"},
     },
+    {
+      path: "/",
+      component: MainAbout,
+      name: "home"
+    },
+    {
+      path: "/projects",
+      component: StudentProjects
+    }
+
 
   ],
   mode: 'history'

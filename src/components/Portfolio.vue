@@ -39,17 +39,23 @@
         <ul>
           <li>
             <b>Employee Provisoning App</b>.
-            <br>Vue, Sharepoint logos
-            <br>Combines several line-of-business applications to streamline
+            <a href="https://vuejs.org/" target="_new"><img src="@/assets/images/vue-logo.png" class="tiny-logo"/></a>
+            <a href="https://docs.microsoft.com/en-us/sharepoint/index" target="_new"><img src="@/assets/images/sharepoint-logo.png" class="tiny-logo" /></a>
+            <br>Combines several line-of-business applications to transform
             employee onboarding process, saving company $10m annually.
           </li>
           <li>
-            <b>Employee Time-tracking App</b>.
-            <br>Vue, Loopback, PostgreSQL logos
-            <br>Helped build data-layer, REST endpoints, deployment to AWS Elastic Beanstalk.
+            <b>Employee Time-tracking App</b>
+             <a href="https://vuejs.org/" target="_new"><img src="@/assets/images/vue-logo.png" class="tiny-logo"/></a>
+             <a href="http://loopback.io" target="_new"><img src="@/assets/images/loopback-logo.png" class="tiny-logo"/></a>
+            <a href="https://www.postgresql.org/" target="_new"><img src="@/assets/images/postgresql-logo.png" class="tiny-logo" /></a>
+            <br>Helped design & implement data-layer, REST endpoints, deployment to AWS Elastic Beanstalk.
           </li>
           <li>
-            <b>Agile Development</b>. Applied Agile methodology to iteratively improve work and deliver new features.
+            <b>Agile Development</b>
+            <a href="https://en.wikipedia.org/wiki/Agile_software_development" target="_new"><img src="@/assets/images/agile-logo.png" class="tiny-logo" /></a>
+             
+            <br> Applied Agile methodology to iteratively improve products and deliver new features.
           </li>
         </ul>
       </div>
@@ -100,7 +106,7 @@ export default {
   display: grid
   grid-template-colums: repeat(auto-fit, minmax(200px, 1fr))
   grid-gap: 10px
-  margin-top: 40px
+  margin-top: 10px
   font-family: "Raleway", "sans-serif"
 
   p
@@ -108,5 +114,11 @@ export default {
     font-family: "Raleway", "sans-serif"
     font-size: 1.8rem
     line-height: 3rem
+  
+  
+  .tiny-logo
+    width: 30px
+    display: inline
+    margin: 0 5px 0 5px
 
 </style>

@@ -1,7 +1,9 @@
 <template>
   <div class="portfolio-item">
     <div class="portfolio-item-heading">{{name}}</div>
+      <p>
     <a :href="liveLink" target="_blank">
+
       <img
         :src="still"
         :id="id"
@@ -11,6 +13,7 @@
         @mouseout="stopGif(id)"
       >
     </a>
+      </p>
     <p
       class="portfolio-item-img-sub"
     >I'm a Gif. Move your mouse over me to animate, or click to visit the app.</p>
