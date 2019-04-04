@@ -87,10 +87,8 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
-.highlights
-li {
+.highlights li {
   text-align: justify;
-  font-size: 2.5rem !important;
   line-height: 3rem;
   text-justify: inter-word;
 }
@@ -138,8 +136,9 @@ p {
   #section-title {
     font-size: 10rem;
   }
-  #approach {
-    font-size: 2.5rem;
+  #approach,
+  .highlights li {
+    font-size: 2rem;
   }
   #approach,
   p {
@@ -152,6 +151,9 @@ p {
 @media (min-width: 900px) {
   #section-title {
     font-size: 12rem;
+  }
+  .highlights li {
+    font-size: 2rem;
   }
 }
 </style>

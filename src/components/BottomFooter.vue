@@ -1,15 +1,20 @@
 
 <template>
-  <div id = "footer-container">
-<a href = 'https://www.linkedin.com/in/bryan-yunis' target="_blank">
-<img src = "@/assets/images/linkedin.png" class = "embed-images" id = "linkedin-img" /></a>
-<p id='contact-text'>&copy; Bryan Yunis<br> Denver, CO 80209</p>
-<a href = 'https://github.com/bry-an' target="_blank">
-<img src = "@/assets/images/github.png" class = "embed-images" id = "github-img" /></a>
-<!-- <a href = 'https://twitter.com/bbyunis?lang=en' target="_blank">
-<img src = "@/assets/images/twitter.png" class = "embed-images" id = "twitter-img" /></a> -->
+  <div id="footer-container">
+    <a href="https://www.linkedin.com/in/bryan-yunis" target="_blank">
+      <img src="@/assets/images/linkedin.png" class="embed-images" id="linkedin-img">
+    </a>
+    <p id="contact-text">
+      &copy; Bryan Yunis
+      <br>Denver, CO 80209
+    </p>
+    <a href="https://github.com/bry-an" target="_blank">
+      <img src="@/assets/images/github.png" class="embed-images" id="github-img">
+    </a>
+    <!-- <a href = 'https://twitter.com/bbyunis?lang=en' target="_blank">
+    <img src = "@/assets/images/twitter.png" class = "embed-images" id = "twitter-img" /></a>-->
   </div>
-  </template>
+</template>
     
   
 <script>
@@ -24,7 +29,7 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   margin-top: 8%;
   padding-top: 3%;
-  height: 130px;
+  height: 100px;
   background-color: #444;
 }
 a {
