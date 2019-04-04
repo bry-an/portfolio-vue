@@ -251,7 +251,7 @@ form {
 ul {
   margin-bottom: 0;
 }
-li {
+#fixed-footer li {
   font-size: 1.8rem !important;
   margin-bottom: 0;
   margin: 0 10px 0 10px

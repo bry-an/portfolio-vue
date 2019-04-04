@@ -1,5 +1,6 @@
 <template>
   <div class="student-projects">
+    <h2 class="student-projects-header">STUDENT PROJECTS</h2>
     <p>Back from when I was working on my full stack bonafides</p>
     
     <PortfolioItem
@@ -38,6 +39,11 @@ export default {
   p
     text-align: center
     font-size: 2rem
+  
+  .student-projects-header
+    color: #444;
+    font-family: "Roboto", "sans-serif"
+    text-align: center
 </style>
 
 

@@ -23,9 +23,11 @@ export default new Router({
       path: "/projects",
       component: StudentProjects
     }
-
-
   ],
-  mode: 'history'
+  mode: 'history',
+  scrollBehavior() {
+    return { x: 0, y: 0 }
+    
+  }
 })
 

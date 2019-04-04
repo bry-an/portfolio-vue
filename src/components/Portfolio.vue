@@ -29,7 +29,7 @@
           </li>
           <li>
             <b>Student projects</b>. The names might be cringe-worthy, but I learned a lot from these
-            student projects in my full-stack web development course.
+            <router-link to="/projects">student projects</router-link> in my full-stack web development course.
           </li>
         </ul>
       </div>
@@ -112,7 +112,7 @@ export default {
   p
     text-align: center
     font-family: "Raleway", "sans-serif"
-    font-size: 1.8rem
+    font-size: 2.0rem
     line-height: 3rem
   
   
@@ -120,5 +120,6 @@ export default {
     width: 30px
     display: inline
     margin: 0 5px 0 5px
-
+  li
+    font-size: 2rem
 </style>

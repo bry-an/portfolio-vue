@@ -2,6 +2,7 @@
 <template>
   <div id="about">
     <div id="approach">
+      <a name="approach"></a>
       <h2 id="section-title">ABOUT ME</h2>
       <div class="row">
         <div class="six columns">

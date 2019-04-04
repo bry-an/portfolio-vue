@@ -2,7 +2,7 @@
   <div id="skills">
     <h2 id="section-title">SKILLS</h2>
     <p>
-      I might feel most alive when I'm neck-deep in unfamiliar code, but I have gained experience
+      I might feel most alive when I'm neck-deep in unfamiliar code, but I have experience
       with the following technologies:
     </p>
     <div id="tech-input-container">
