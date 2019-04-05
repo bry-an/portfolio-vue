@@ -14,7 +14,7 @@
             comfortable. Currently, I'm enjoying learning the finer points of Vue.js
           </p>
           <a
-            @click="readMore = !readMore; scrollToReadMore()"
+            @click="readMore = !readMore"
           >{{readMore? "...read less": "read more..."}}</a>
         </div>
         <div class="six columns">
@@ -85,14 +85,6 @@ export default {
     };
   },
   methods: {
-    scrollToReadMore() {
-      if (!this.readMore) {
-        document.getElementById("read-more").scrollIntoView({
-          behavior: "smooth",
-          start: "block"
-        });
-      }
-    }
   }
 };
 </script>
