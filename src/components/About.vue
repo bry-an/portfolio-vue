@@ -13,7 +13,9 @@
             both on and off the keyboard. I thrive when I'm challenged to learn new technologies and surpass what's
             comfortable. Currently, I'm enjoying learning the finer points of Vue.js
           </p>
-          <a @click="readMore = !readMore">{{readMore? "...read less": "read more..."}}</a>
+          <a
+            @click="readMore = !readMore; scrollToReadMore()"
+          >{{readMore? "...read less": "read more..."}}</a>
         </div>
         <div class="six columns">
           <h3 class="subheading">HIGHLIGHTS</h3>
@@ -39,7 +41,7 @@
           </div>
         </div>
       </div>
-      <div v-if="readMore" transition="expand">
+      <div v-if="readMore" id="read-more">
         <p>
           Beyond web development, I am fascinated by anything that involves machine learning and have recently
           discovered the expressiveness of Python.
@@ -76,12 +78,22 @@
 import Skills from "./skills";
 export default {
   name: "About",
+  components: { Skills },
   data() {
     return {
       readMore: false
     };
   },
-  components: { Skills }
+  methods: {
+    scrollToReadMore() {
+      if (!this.readMore) {
+        document.getElementById("read-more").scrollIntoView({
+          behavior: "smooth",
+          start: "block"
+        });
+      }
+    }
+  }
 };
 </script>
 <style>

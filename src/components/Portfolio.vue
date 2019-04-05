@@ -29,7 +29,7 @@
           </li>
           <li>
             <b>Student projects</b>. The names might be cringe-worthy, but I learned a lot from these
-            <router-link to="/projects">student projects</router-link> in my full-stack web development course.
+            <router-link to="/projects">student projects</router-link>in my full-stack web development course.
           </li>
         </ul>
       </div>
@@ -39,23 +39,35 @@
         <ul>
           <li>
             <b>Employee Provisoning App</b>.
-            <a href="https://vuejs.org/" target="_new"><img src="@/assets/images/vue-logo.png" class="tiny-logo"/></a>
-            <a href="https://docs.microsoft.com/en-us/sharepoint/index" target="_new"><img src="@/assets/images/sharepoint-logo.png" class="tiny-logo" /></a>
+            <a href="https://vuejs.org/" target="_new">
+              <img src="@/assets/images/vue-logo.png" class="tiny-logo">
+            </a>
+            <a href="https://docs.microsoft.com/en-us/sharepoint/index" target="_new">
+              <img src="@/assets/images/sharepoint-logo.png" class="tiny-logo">
+            </a>
             <br>Combines several line-of-business applications to transform
             employee onboarding process, saving company $10m annually.
           </li>
           <li>
             <b>Employee Time-tracking App</b>
-             <a href="https://vuejs.org/" target="_new"><img src="@/assets/images/vue-logo.png" class="tiny-logo"/></a>
-             <a href="http://loopback.io" target="_new"><img src="@/assets/images/loopback-logo.png" class="tiny-logo"/></a>
-            <a href="https://www.postgresql.org/" target="_new"><img src="@/assets/images/postgresql-logo.png" class="tiny-logo" /></a>
+            <a href="https://vuejs.org/" target="_new">
+              <img src="@/assets/images/vue-logo.png" class="tiny-logo">
+            </a>
+            <a href="http://loopback.io" target="_new">
+              <img src="@/assets/images/loopback-logo.png" class="tiny-logo">
+            </a>
+            <a href="https://www.postgresql.org/" target="_new">
+              <img src="@/assets/images/postgresql-logo.png" class="tiny-logo">
+            </a>
             <br>Helped design & implement data-layer, REST endpoints, deployment to AWS Elastic Beanstalk.
           </li>
           <li>
             <b>Agile Development</b>
-            <a href="https://en.wikipedia.org/wiki/Agile_software_development" target="_new"><img src="@/assets/images/agile-logo.png" class="tiny-logo" /></a>
-             
-            <br> Applied Agile methodology to iteratively improve products and deliver new features.
+            <a href="https://en.wikipedia.org/wiki/Agile_software_development" target="_new">
+              <img src="@/assets/images/agile-logo.png" class="tiny-logo">
+            </a>
+
+            <br>Applied Agile methodology to iteratively improve products and deliver new features.
           </li>
         </ul>
       </div>
