@@ -18,6 +18,8 @@ export default {
 </script>
 
 <style lang="sass">
+.machine-learning
+    padding-top: 70px
 
 </style>
 

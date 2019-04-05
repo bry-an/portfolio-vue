@@ -33,10 +33,15 @@ export default {
   methods: {
     handleNavbarScroll(event) {
       if (this.$route.path === "/projects") {
+        console.log("path !== '/'");
         document.querySelector(".menu").classList.add("menu-scrolled");
       } else if (window.scrollY > 10) {
+        console.log("ELSE");
         document.querySelector(".menu").classList.add("menu-scrolled");
-      } else document.querySelector(".menu").classList.remove("menu-scrolled");
+      } else {
+        console.log("FINAL ELSE");
+        document.querySelector(".menu").classList.remove("menu-scrolled");
+      }
     },
     handleAnchorScroll(id) {
       document.getElementById(id).scrollIntoView({
