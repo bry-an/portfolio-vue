@@ -29,7 +29,7 @@
           </li>
           <li>
             <b>Student projects</b>. The names might be cringe-worthy, but I learned a lot from these
-            <router-link to="/projects">student projects</router-link>in my full-stack web development course.
+            <router-link to="/projects">student projects</router-link> in my full-stack web development course.
           </li>
         </ul>
       </div>

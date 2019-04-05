@@ -19,7 +19,7 @@
                 </div>
         <p class='error-text' v-if='errors.length'>
           <ul>
-            <li v-for='error in errors'>{{error}}</li>
+            <li v-for='error in errors' :key="error">{{error}}</li>
           </ul>
         </p>
         <p id='thanks-message' v-if='this.thanks'>
@@ -66,8 +66,6 @@ export default {
       document
         .getElementById("contact-window")
         .classList.remove("contact-window");
-      document.getElementById("footer-contact-button").style.display =
-        "inherit";
       if (
         contactWindowBody.contains(document.getElementById("thanks-message"))
       ) {
@@ -208,6 +206,11 @@ form {
   color: red;
   font-size: 1rem;
   margin-bottom: 0;
+  margin-left: 1rem
+}
+
+.error-text li {
+  margin-bottom: 0
 }
 
 #thanks-message-button {
@@ -251,9 +254,5 @@ form {
 ul {
   margin-bottom: 0;
 }
-#fixed-footer li {
-  font-size: 1.8rem !important;
-  margin-bottom: 0;
-  margin: 0 10px 0 10px
-}
+
 </style>
