@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import App from '@/App'
-import StudentProjects from "@/components/StudentProjects"
-import MainAbout from "@/views/MainAbout"
+const StudentProjects = () => import("@/components/StudentProjects")
+const MainAbout = () => import("@/views/MainAbout")
+const MachineLearning = () => import("@/views/MachineLearning")
 //@ means 'from root of project'
 
 Vue.use(Router)
@@ -12,7 +12,7 @@ export default new Router({
   routes: [
     {
       path: '*',
-      redirect: { name: "home"},
+      redirect: { name: "home" },
     },
     {
       path: "/",
@@ -22,12 +22,17 @@ export default new Router({
     {
       path: "/projects",
       component: StudentProjects
+    },
+    {
+      path: "/machinelearning",
+      component: MachineLearning
     }
+
   ],
   mode: 'history',
   scrollBehavior() {
     return { x: 0, y: 0 }
-    
+
   }
 })
 
