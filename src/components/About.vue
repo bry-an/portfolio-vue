@@ -110,7 +110,6 @@ a {
   font-size: 3.5rem;
   font-weight: bold;
   font-family: "Roboto", "sans-serif";
-  color: #444;
   padding: 3% 0 3% 0;
   text-align: center;
 }

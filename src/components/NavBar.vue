@@ -32,7 +32,7 @@ export default {
   name: "Navbar",
   methods: {
     handleNavbarScroll(event) {
-      if (this.$route.path === "/projects") {
+      if (this.$route.path === "/projects" || this.$route.path === "/machinelearning") {
         console.log("path !== '/'");
         document.querySelector(".menu").classList.add("menu-scrolled");
       } else if (window.scrollY > 10) {
