@@ -36,6 +36,8 @@ export default {
   font-family: 'Raleway'
   padding-top: 70px
   margin: 0 20px 0 20px
+  p
+    font-size: 2rem
   .machine-learning-subheader
     margin-top: 0
     text-align: center
