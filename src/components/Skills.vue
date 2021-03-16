@@ -80,8 +80,8 @@
 </template>
 
 <script>
-import skills from "../data/skills";
-import SkillsItem from "./skillsItem";
+import skills from "../data/skills.js";
+import SkillsItem from "./SkillsItem.vue";
 
 export default {
   name: "Skills",

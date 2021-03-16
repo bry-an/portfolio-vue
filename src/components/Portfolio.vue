@@ -90,8 +90,8 @@
 
 
 <script>
-import PortfolioItem from "./PortfolioItem";
-import portfolioItems from "../data/portfolioItems";
+import PortfolioItem from "./PortfolioItem.vue";
+import portfolioItems from "../data/portfolioItems.js";
 export default {
   name: "Portfolio",
   methods: {

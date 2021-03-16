@@ -14,7 +14,7 @@
     </form>
     <p class='error-text' v-if='errors.length'>
       <ul>
-        <li v-for='error in errors'>{{error}}</li>
+        <li v-for='error in errors' :key='error'>{{error}}</li>
       </ul>
     </p>
     <p id='submitted-text' v-if='this.thanks'>

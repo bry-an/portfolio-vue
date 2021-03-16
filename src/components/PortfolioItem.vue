@@ -39,7 +39,7 @@
   </div>
 </template>
 <script>
-import TechnologyIcon from "./TechnologyIcon";
+import TechnologyIcon from "./TechnologyIcon.vue";
 export default {
   name: "PortfolioItem",
   props: [

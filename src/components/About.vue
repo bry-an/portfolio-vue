@@ -75,7 +75,7 @@
 
 
 <script>
-import Skills from "./skills";
+import Skills from "./Skills.vue";
 export default {
   name: "About",
   components: { Skills },
