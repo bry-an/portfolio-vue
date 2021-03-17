@@ -66,11 +66,11 @@ export default {
       }
     },
     validEmail: function(email) {
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(email);
+      // eslint-disable-next-line no-useless-escape
+      const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return regex.test(email);
     },
     clearContactArea: function() {
-      var contactBody = document.getElementById("contact-body");
       (this.name = ""), (this.email = ""), (this.message = "");
       this.thanks = true;
       setTimeout(() => {
@@ -90,7 +90,6 @@ export default {
       };
       axios
         .post(URL, JSON.stringify(data))
-        .then(response => console.log("aws response", response))
         .then(this.clearContactArea());
     }
   }

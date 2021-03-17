@@ -32,18 +32,20 @@ export default {
   components: { PortfolioItem }
 };
 </script>
-<style lang="sass" scoped>
-.student-projects
+<style lang="scss" scoped>
+.student-projects {
   font-family: "Raleway", "sans-serif";
-  padding-top: 70px
-  p
-    text-align: center
-    font-size: 2rem
-  
-  .student-projects-header
+  padding-top: 70px;
+  p {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .student-projects-header {
     color: #444;
-    font-family: "Roboto", "sans-serif"
-    text-align: center
+    font-family: "Roboto", "sans-serif";
+    text-align: center;
+  }
+}
 </style>
 
 

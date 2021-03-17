@@ -90,7 +90,6 @@
 
 
 <script>
-import PortfolioItem from "./PortfolioItem.vue";
 import portfolioItems from "../data/portfolioItems.js";
 export default {
   name: "Portfolio",
@@ -104,7 +103,6 @@ export default {
       portfolioItems
     };
   },
-  components: { PortfolioItem }
 };
 </script>
 <style lang="sass">

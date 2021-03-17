@@ -31,15 +31,12 @@
 export default {
   name: "Navbar",
   methods: {
-    handleNavbarScroll(event) {
+    handleNavbarScroll() {
       if (this.$route.path === "/projects" || this.$route.path === "/machinelearning") {
-        console.log("path !== '/'");
         document.querySelector(".menu").classList.add("menu-scrolled");
       } else if (window.scrollY > 10) {
-        console.log("ELSE");
         document.querySelector(".menu").classList.add("menu-scrolled");
       } else {
-        console.log("FINAL ELSE");
         document.querySelector(".menu").classList.remove("menu-scrolled");
       }
     },

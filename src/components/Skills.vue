@@ -44,32 +44,7 @@
 
     <div class="skills-container">
       <SkillsItem
-        v-show="displayAll"
-        v-for="skill in skills"
-        :name="skill.name"
-        :key="skill.key"
-        :image="skill.image"
-        :type="skill.type"
-      />
-      <SkillsItem
-        v-show="displayFrontend"
-        v-for="skill in frontend"
-        :name="skill.name"
-        :key="skill.key"
-        :image="skill.image"
-        :type="skill.type"
-      />
-      <SkillsItem
-        v-show="displayBackend"
-        v-for="skill in backend"
-        :name="skill.name"
-        :key="skill.key"
-        :image="skill.image"
-        :type="skill.type"
-      />
-      <SkillsItem
-        v-show="displayTechnologies"
-        v-for="skill in technologies"
+        v-for="skill in displayedSkills"
         :name="skill.name"
         :key="skill.key"
         :image="skill.image"
@@ -112,6 +87,12 @@ export default {
     }
   },
   computed: {
+    displayedSkills() {
+      if (this.displayFrontend) return this.skills.filter(skill => skill.type.includes("frontend"))
+      if (this.displayBackend) return this.skills.filter(skill => skill.type.includes("backend"))
+      if (this.displayTechnologies) return this.skills.filter(skill => skill.type.includes("technologies"))
+      return this.skills // displayAll
+    },
     frontend() {
       return Object.freeze(this.skills.filter(skill => skill.type.indexOf("frontend") !== -1));
     },
@@ -138,29 +119,38 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="scss">
 
-#skills
-    min-height: 930px
-    button:focus
+#skills {
+    min-height: 930px;
+    button:focus {
         background-color: #ff5d4c
-    input 
-        margin-left: 20px
-    .label
-        font-size: 2.5rem
+    }
+    input {
+        margin-left: 20px;
+    }
+    .label {
 
-    .skills-container 
-        max-width: 80%
-        margin: auto
-        display: grid
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
-        grid-gap: 5px
-        margin-top: 50px
+        font-size: 2.5rem;
+    }
+
+    .skills-container  {
+      min-height: 532px;
+        max-width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 5px;
+        margin-top: 50px;
+    }
     
-    #tech-input-container
-        display: grid
-        grid-template-columns: repeat(auto-fit, minmax(155px, 1fr))
-        grid-gap: 5px
+    #tech-input-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+        grid-gap: 5px;
+    }
+
+}
 
 
 </style>
